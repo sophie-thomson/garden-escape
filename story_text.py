@@ -26,12 +26,14 @@ if you can find a way to revert to your last save before the dreaded email arriv
 """
 
 SPIDER_TEXT = """
-Determined to return to normal size, you cautiously make your way through the grass. 
+Determined to return to your normal size, you take a deep breath and cautiously make 
+your way through the grass.
+
 As you approach a huge dandelion, you spot a massive spider lurking in the shadows.
+"""
 
-Do you:
-
-a) Sneak past the spider, hoping it doesn't notice you.
+SPIDER_OPTIONS = """
+a) Try to sneak past the spider, hoping it doesn't notice you.
 
 b) Create a distraction so you can make a run for it.
 """

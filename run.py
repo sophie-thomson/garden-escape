@@ -2,7 +2,7 @@
 
 from pyfiglet import figlet_format
 from colorama import Fore, Back, Style
-import story_text as story
+import story_text as st
 
 def get_player_name():
   """
@@ -12,15 +12,32 @@ def get_player_name():
   user_name = input("Please enter your chosen player name: \n\n").capitalize()
   player = user_name
   
-  print(f"\nGood luck {player}!\n")
-
+  print(Fore.YELLOW + f"\nGood luck {player}!\n")
+  print(Style.RESET_ALL)
+  print(st.INTRO_TEXT)
   return player
 
 def start_adventure():
-  print(story.INTRO_TEXT)
   print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!\n")
-  print(Fore.MAGENTA +"Choose wisely...")
+  print(Style.RESET_ALL)
 
+  start_choice = input("Are you ready? y / n : \n")
+  
+
+def run_spider_story():
+  import spider
+  print(st.SPIDER_TEXT)
+  print(Fore.CYAN + "Do you:")
+  print(Style.RESET_ALL)
+  print(st.SPIDER_OPTIONS)
+
+  get_spider_choice()
+  
+def get_spider_choice():
+  print(Fore.MAGENTA +"Choose wisely...")
+  print(Style.RESET_ALL)
+  spider_choice = input("Enter a or b: \n") 
+  
 
 def user_choice():
   """
@@ -51,6 +68,7 @@ def validate_restart_choice():
 def main():
   get_player_name()
   start_adventure()
+  run_spider_story()
 
   # Title text to see before any functionality
 print("       A choose-your-own adventure story created by Sophie Thomson:")
