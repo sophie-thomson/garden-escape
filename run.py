@@ -32,32 +32,31 @@ def run_spider_story():
   get_spider_choice()
   
 def get_spider_choice():
-  print(Style.RESET_ALL)
-  print("Choose wisely...\n")
-  spider_choice = input(Fore.YELLOW + "Enter a or b: \n")
-
-  
-
-def user_choice():
   """
   Function to get choice input from user.
   Run a while loop to collect a valid entry of a or b from the user 
   via the terminal. The loop will repeatedly request data, until it is valid.
   """
-  pass
+  while True:
+    print(Fore.WHITE + "Choose wisely...\n")
+    spider_choice = input(Fore.YELLOW + "Enter a or b: \n").lower() 
+    if validate_story_choice(spider_choice): #spider_choice is the data that we want to check
+      print("Choice is valid!")
+      break # if the choice is valid (True) the break command stops the while loop
+  return spider_choice
 
-def validate_story_choice():
+
+
+def validate_story_choice(value):
   """
-  Inside the try, raises ValueError if user enters a value that is not a or b.
+  Inside the try, raises ValueError if the player enters a value that is not a or b.
   """
   try:
-    if value != "a" or "b":
-      raise ValueError (
-        print(f"Only the single letter 'a' or 'b' required, you entered {value}")
-      )
+    if value not in ["a", "b"]:
+     raise ValueError(Fore.RED + f"A single letter 'a' or 'b' is required. You entered '{value}'.")
   except ValueError as e:
-        print(f"Invalid entry: {e}, please try again.\n")
-        return False #if error is raised, returns False
+    print(Fore.RED + f"Invalid entry. {e} \nPlease try again.")
+    return False #if error is raised, returns False
     
   return True #if function runs without any errors, then returns True 
 
