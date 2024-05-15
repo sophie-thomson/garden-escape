@@ -1,6 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 from pyfiglet import figlet_format
+from colorama import Fore, Back, Style
 
 def user_choice():
   """
@@ -32,12 +33,12 @@ def main():
   pass
 
 
-  # first message you see before any functionality
-print(figlet_format("  G A R D E N\n  E S C A P E", font = "slant"))
-print("       H o n e y   I   S h r u n k   T h e   C o d e r !")
+  # Title text to see before any functionality
+print(Fore.GREEN + figlet_format("  G A R D E N\n  E S C A P E", font = "slant"))
+print(Style.RESET_ALL + "       H o n e y   I   S h r u n k   T h e   C o d e r !")
 
 
-print(r"""
+print(Fore.YELLOW +r"""
                                                         *{*}*
                                                        **{*}**           
    d*b                                                  *{*}*            
@@ -45,7 +46,8 @@ print(r"""
    d*b        (***)                                       |              
     |           |                                       \ | /            
    \|/         \|/                                       \|/            """)
-print(r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+print(Style.RESET_ALL)
 main()
 
 
