@@ -12,31 +12,30 @@ def get_player_name():
   user_name = input("Please enter your chosen player name: \n\n").capitalize()
   player = user_name
   
-  print(Fore.YELLOW + f"\nGood luck {player}!\n")
-  print(Style.RESET_ALL)
-  print(st.INTRO_TEXT)
+  print(Fore.YELLOW + f"\nGood luck {player}!\n")  
   return player
 
 def start_adventure():
   print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!\n")
-  print(Style.RESET_ALL)
+  print(Fore.WHITE + st.INTRO_TEXT)
 
-  start_choice = input("Are you ready? y / n : \n")
+  start_choice = input(Fore.YELLOW + "Are you ready? y / n : \n")
   
 
 def run_spider_story():
   import spider
   print(st.SPIDER_TEXT)
-  print(Fore.CYAN + "Do you:")
-  print(Style.RESET_ALL)
-  print(st.SPIDER_OPTIONS)
+  print("Do you:\n")
+  print(Fore.MAGENTA + st.SPIDER_OPTION_A)
+  print(Fore.CYAN + st.SPIDER_OPTION_B)
 
   get_spider_choice()
   
 def get_spider_choice():
-  print(Fore.MAGENTA +"Choose wisely...")
   print(Style.RESET_ALL)
-  spider_choice = input("Enter a or b: \n") 
+  print("Choose wisely...\n")
+  spider_choice = input(Fore.YELLOW + "Enter a or b: \n")
+
   
 
 def user_choice():
