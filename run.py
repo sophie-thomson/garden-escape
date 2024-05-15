@@ -2,19 +2,25 @@
 
 from pyfiglet import figlet_format
 from colorama import Fore, Back, Style
+import story_text as story
 
-def user_name():
+def get_player_name():
   """
   Function to get gamer name from user. Will capitalise whatever name the user 
   enters.
   """
-  user_name = input("Please enter your chosen gamer name: \n\n").capitalize()
+  user_name = input("Please enter your chosen player name: \n\n").capitalize()
+  player = user_name
+  
+  print(f"\nGood luck {player}!\n")
 
-  print(f"\nGood luck {user_name}!")
-  start_game()
+  return player
 
-def start_game():
-  pass  
+def start_adventure():
+  print(story.INTRO_TEXT)
+  print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!\n")
+  print(Fore.MAGENTA +"Choose wisely...")
+
 
 def user_choice():
   """
@@ -43,8 +49,8 @@ def validate_restart_choice():
   pass
 
 def main():
-  user_name()
-
+  get_player_name()
+  start_adventure()
 
   # Title text to see before any functionality
 print("       A choose-your-own adventure story created by Sophie Thomson:")
