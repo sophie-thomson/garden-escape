@@ -49,7 +49,8 @@ def get_spider_choice():
 
 def validate_story_choice(value):
   """
-  Inside the try, raises ValueError if the player enters a value that is not a or b.
+  Validates if the player enters a story choice value that is either 'a' or 'b'.
+  Inside the try, raises a ValueError if the player enters a value that is not a or b.
   """
   try:
     if value not in ["a", "b"]:
