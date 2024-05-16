@@ -106,7 +106,8 @@ def display_centipede_story_choices():
   print(Fore.CYAN + st.CENTIPEDE_OPTION_B)
 
   player_choice_3 = get_story_choice()
-  print(f"Player choice entered is {player_choice_3}")
+  import centipede # displays centipede ASCII Art
+  # print(f"Player choice entered is {player_choice_3}")
   if player_choice_3 == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
   else:

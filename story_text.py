@@ -53,9 +53,11 @@ into a nearby smart sprinkler via bluetooth, causing water to spray everywhere.
 While the spider is distracted, you run for it and escape into the undergrowth.
 """
 NESTED_SPIDER_OPTIONS_TEXT = """
-As you watch in transfixed horror, the spider seems to grow twice as large as it 
-gets closer and closer. You wish you had time to whip out your laptop and ask 
-StackOverflow what to do, but you need to act fast.
+As you watch, transfixed in horror, the spider seems to grow twice as large as it 
+gets closer and closer. 
+
+You wish you had time to whip out your laptop and ask StackOverflow what to do, 
+but you need to act fast.
 
 Do you:\n"""
 
@@ -64,7 +66,8 @@ SPIDER_OPTION_A2 = "a) Quickly roll out of the way.\n"
 SPIDER_OPTION_B2 = "b) Try to reason with the spider.\n"
 
 SPIDER_OPTION_A2_TEXT = """
-You roll out of the way just in time, narrowly avoiding the spider's deadly strike. 
+You throw yourself across the ground and roll out of the way just in time, narrowly 
+avoiding the spider's deadly strike. 
 
 Not stopping to check if the spider is in pursuit, you get to your feet and run as 
 hard and fast as you can until your chest feels like it's going to burst. 
@@ -100,8 +103,10 @@ some pebbles and stops directly in your path.
 
 CENTIPEDE_OPTIONS_TEXT = """
 Your heart pounding with adrenaline, you square up against the centipede, ready 
-to defend yourself. It hisses menacingly and raises the front of its body to
-loom above you, its numerous legs poised to strike...
+to defend yourself. 
+
+It hisses menacingly and raises the front of its body to loom above you, its 
+numerous legs poised to strike...
 
 Do you:
 """
@@ -115,15 +120,11 @@ has lightning-fast reflexes and as it traps you in its claws, you feel your body
 stiffen as the venom enters your bloodstream. 
 
 The last thing you see is a pair of mandibles reaching hungrily towards your face.
-
-Better luck next time!
 """
 
 CENTIPEDE_OPTION_B_TEXT= """
 You look around frantically for something you can use as a weapon against the 
-centipede. 
-
-Remembering your laptop, you open it up and turn the screen brightness
+centipede. Remembering your laptop, you open it up and turn the screen brightness
 up to blinding, thrusting it towards the centipede's head and shouting at the 
 top of your voice. 
 
