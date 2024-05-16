@@ -23,7 +23,7 @@ def start_adventure():
   print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!")
   print(Fore.WHITE + st.INTRO_TEXT)
   # no input validation required. As long as they press enter the next function in main() runs
-  start_choice = input(Fore.YELLOW + f"Are you ready? Press enter to continue... \n")
+  start_prompt = input(Fore.YELLOW + f"Are you ready? Press enter to continue... \n")
   
 
 def display_spider_story():
@@ -75,8 +75,7 @@ def display_spider_story_choices():
   if player_choice_1 == "a":
     import spider # displays spider ASCII Art
     print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
-    print(Fore.MAGENTA + st.SPIDER_OPTION_A2)
-    print(Fore.CYAN + st.SPIDER_OPTION_B2)
+    progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
     display_nested_spider_choices()
   else:
     import spider # displays spider ASCII Art
@@ -84,12 +83,18 @@ def display_spider_story_choices():
 
   
 def display_nested_spider_choices():
+  print(Fore.WHITE + st.NESTED_SPIDER_OPTIONS_TEXT)
+  print(Fore.MAGENTA + st.SPIDER_OPTION_A2)
+  print(Fore.CYAN + st.SPIDER_OPTION_B2)
+
   player_choice_2 = get_story_choice()
   print(f"Player choice entered is {player_choice_2}")
   if player_choice_2 == "a":
     print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
   else:
     print(Fore.WHITE + st.SPIDER_OPTION_B2_TEXT)
+    
+  progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
 
 def validate_restart_choice():
@@ -101,7 +106,7 @@ def main():
   display_spider_story()
   display_spider_story_choices()
   
-  # run_spider_choice()
+  
 
 
 

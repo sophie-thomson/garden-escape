@@ -43,9 +43,7 @@ You carefully manoeuver around the spider, hoping to avoid its notice. However,
 your movement disturbs a nearby web strand, alerting the arachnid to your presence.
 
 You freeze, paralysed in fear as the spider fixes all 8 of its beady eyes on you 
-and steadily descends towards you...
-
-Do you:"""
+and steadily descends towards you..."""
 
 SPIDER_OPTION_B_TEXT = """
 Remembering that you have your laptop with you, you use your coding skills to hack 
@@ -53,6 +51,11 @@ into a nearby smart sprinkler via bluetooth, causing water to spray everywhere.
 
 While the spider is distracted, you run for it and escape into the undergrowth.
 """
+NESTED_SPIDER_OPTIONS_TEXT = """
+As you watch in transfixed horror, the spider seems to grow twice as large as it
+in scale as it draws closer. You know you need to act fast.
+
+Do you:\n"""
 
 SPIDER_OPTION_A2 = "a) Quickly roll out of the way.\n"
 
@@ -71,4 +74,5 @@ get home.
 
 Surprisingly, the spider seems to understand and lets you pass unharmed. 
 
-You breathe a sigh of relief and move forward."""
+You breathe a sigh of relief and move forward, vowing that you will never harm a 
+spider again when you get back to normality."""
