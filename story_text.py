@@ -51,8 +51,6 @@ Remembering that you have your laptop with you, you use your coding skills to ha
 into a nearby smart sprinkler via bluetooth, causing water to spray everywhere. 
 
 While the spider is distracted, you run for it and escape into the undergrowth.
-
-At least you can now have something to drink!
 """
 NESTED_SPIDER_OPTIONS_TEXT = """
 As you watch in transfixed horror, the spider seems to grow twice as large as it 
@@ -81,7 +79,7 @@ get home.
 
 Surprisingly, the spider seems to understand and lets you pass unharmed. 
 
-You breathe a sigh of relief and slink away, vowing that you will never harm a 
+You breathe a sigh of relief and hurry away, vowing that you will never harm a 
 spider again when you get back to normality."""
 
 CENTIPEDE_STORY_TEXT = """
@@ -96,10 +94,35 @@ pots up ahead.
 Suddenly a gigantic centipede as long as a street lamp scuttles out from behind 
 your favourite glazed blue pot. You watch in terror as it meanders fluidly around 
 some pebbles and stops directly in your path.
+"""
 
+CENTIPEDE_OPTIONS_TEXT = """
 Your heart pounding with adrenaline, you square up against the centipede, ready 
 to defend yourself. It hisses menacingly and raises the front of its body to
 loom above you, its numerous legs poised to strike...
+
+Do you:
 """
 
+CENTIPEDE_OPTION_A = "a) Attempt to outmaneuver it with your agility"
+CENTIPEDE_OPTION_B = "b) Search for a nearby object to use as a weapon"
+
+CENTIPEDE_OPTION_A_TEXT= """
+You weave left and right before darting between its legs, but the centipede 
+has lightning-fast reflexes and as it traps you in its claws, you feel your body 
+stiffen as the venom enters your bloodstream. The last thing you see is a pair 
+of mandibles reaching hungrily towards your head.
+
+Better luck next time!
+"""
+
+CENTIPEDE_OPTION_A_TEXT= """
+You search frantically for something you can use as a weapon against the 
+centipede. Remembering your laptop, you open it up and turn the screen brightness
+up to blinding, thrusting it towards the centipede's head shouting at the top of 
+your voice. 
+
+Startled by the sudden movements, noise and bright lights, the 
+centipede slinks away, allowing you to pass.
+"""
 
