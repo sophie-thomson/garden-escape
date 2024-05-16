@@ -14,7 +14,8 @@ You are working from home on your latest Python terminal project in the garden
 thinking “This is what remote working is all about!” when you receive a 
 mysterious email featuring nothing but a big red button inviting you to 'Click Me'.
 
-You know you shouldn't, but curiosity gets the better of you and you click the button… 
+You know you shouldn't...
+But curiosity gets the better of you and you click the button... 
 
 There is a flash and you suddenly find yourself standing amidst gigantic blades of 
 grass in a vast garden filled with towering plants and looming dangers. With no idea 
@@ -41,9 +42,10 @@ SPIDER_OPTION_A_TEXT = """
 You carefully manoeuver around the spider, hoping to avoid its notice. However, 
 your movement disturbs a nearby web strand, alerting the arachnid to your presence.
 
-You freeze, paralysed in fear as the spider fixes all 8 of its beady eyes on you. 
+You freeze, paralysed in fear as the spider fixes all 8 of its beady eyes on you 
+and steadily descends towards you...
 
-Steadily, the spider starts to lower itself towards you..."""
+Do you:"""
 
 SPIDER_OPTION_B_TEXT = """
 Remembering that you have your laptop with you, you use your coding skills to hack 

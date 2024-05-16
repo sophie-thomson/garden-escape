@@ -20,7 +20,7 @@ def start_adventure():
   Displays the intro text for the beginning of the story and prompts player to confirm they
   are ready to start the choose-your-own adventure.
   """
-  print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!\n")
+  print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!")
   print(Fore.WHITE + st.INTRO_TEXT)
   # no input validation required. As long as they press enter the next function in main() runs
   start_choice = input(Fore.YELLOW + f"Are you ready? Press enter to continue... \n")
@@ -38,7 +38,7 @@ def display_spider_story():
 
   # get_spider_choice()
   
-def get_spider_choice():
+def get_story_choice():
   """
   Function to get choice input from user.
   Run a while loop to collect a valid entry of a or b from the user 
@@ -46,12 +46,12 @@ def get_spider_choice():
   """
   while True:
     print(Fore.WHITE + "Choose wisely...\n")
-    spider_choice = input(Fore.YELLOW + "Enter a or b: \n").lower() 
-    if validate_story_choice(spider_choice): #spider_choice is the data that we want to check
+    story_choice = input(Fore.YELLOW + "Enter a or b: \n").lower() 
+    if validate_story_choice(story_choice): #spider_choice is the data that we want to check
       print("Choice is valid!")
       break # if the choice is valid (True) the break command stops the while loop
     
-  return spider_choice
+  return story_choice
   
 
 def validate_story_choice(value):
@@ -70,19 +70,26 @@ def validate_story_choice(value):
 
 
 def display_spider_story_choices():
-  player_choice_1 = get_spider_choice()
+  player_choice_1 = get_story_choice()
   print(f"Player choice entered is {player_choice_1}")
   if player_choice_1 == "a":
     import spider # displays spider ASCII Art
     print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
-    get_spider_choice_2()
+    print(Fore.MAGENTA + st.SPIDER_OPTION_A2)
+    print(Fore.CYAN + st.SPIDER_OPTION_B2)
+    display_nested_spider_choices()
   else:
     import spider # displays spider ASCII Art
     print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
 
   
-def get_spider_choice_2():
-  pass  
+def display_nested_spider_choices():
+  player_choice_2 = get_story_choice()
+  print(f"Player choice entered is {player_choice_2}")
+  if player_choice_2 == "a":
+    print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
+  else:
+    print(Fore.WHITE + st.SPIDER_OPTION_B2_TEXT)
 
 
 def validate_restart_choice():
