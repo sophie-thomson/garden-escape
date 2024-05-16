@@ -29,7 +29,8 @@ SPIDER_TEXT = """
 Determined to return to your normal size, you take a deep breath and cautiously make
 your way through the grass.
 
-As you climb over a dandelion patch, you spot a massive spider lurking in the shadows.
+As you climb between some dandelions, you spot a massive spider hanging on a thread, 
+swaying gently in the shadows above your head.
 """
 
 SPIDER_OPTION_A = "a) Try to sneak past the spider, hoping it doesn't notice you.\n"
@@ -37,10 +38,12 @@ SPIDER_OPTION_A = "a) Try to sneak past the spider, hoping it doesn't notice you
 SPIDER_OPTION_B = "b) Create a distraction so you can make a run for it.\n"
 
 SPIDER_OPTION_A_TEXT = """
-You carefully maneuver around the spider, hoping to avoid its notice. However, 
+You carefully manoeuver around the spider, hoping to avoid its notice. However, 
 your movement disturbs a nearby web strand, alerting the arachnid to your presence.
 
-It lunges towards you!"""
+You freeze, paralysed in fear as the spider fixes all 8 of its beady eyes on you. 
+
+Steadily, the spider starts to lower itself towards you..."""
 
 SPIDER_OPTION_B_TEXT = """
 Remembering that you have your laptop with you, you use your coding skills to hack 
