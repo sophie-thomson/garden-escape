@@ -51,6 +51,8 @@ Remembering that you have your laptop with you, you use your coding skills to ha
 into a nearby smart sprinkler via bluetooth, causing water to spray everywhere. 
 
 While the spider is distracted, you run for it and escape into the undergrowth.
+
+At least you can now have something to drink!
 """
 NESTED_SPIDER_OPTIONS_TEXT = """
 As you watch in transfixed horror, the spider seems to grow twice as large as it 
@@ -83,5 +85,21 @@ You breathe a sigh of relief and slink away, vowing that you will never harm a
 spider again when you get back to normality."""
 
 CENTIPEDE_STORY_TEXT = """
-Your heart is pounding with adrenaline, but eventually your 
+Having made it past the spider, you feel pretty good about your progress, but you 
+are getting hungry. You think dreamily of your stash of trail mix and chocolate 
+buttons that keep you going through those long hours of debugging, and wonder if 
+you'll ever get to use your 'World's #0 Programmer' mug again.
+
+Lost in your thoughts, you don't notice the movement in the house-sized plant 
+pots up ahead.
+
+Suddenly a gigantic centipede as long as a street lamp scuttles out from behind 
+your favourite glazed blue pot. You watch in terror as it meanders fluidly around 
+some pebbles and stops directly in your path.
+
+Your heart pounding with adrenaline, you square up against the centipede, ready 
+to defend yourself. It hisses menacingly and raises the front of its body to
+loom above you, its numerous legs poised to strike...
 """
+
+

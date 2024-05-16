@@ -97,7 +97,8 @@ def display_nested_spider_choices():
   progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
 def display_centipede_story():
-  pass
+  print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
+  progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
 def display_centipede_story_choices():
   pass
