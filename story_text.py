@@ -69,6 +69,8 @@ You roll out of the way just in time, narrowly avoiding the spider's deadly stri
 Not stopping to check if the spider is in pursuit, you get to your feet and run as 
 hard and fast as you can until your chest feels like it's going to burst. 
 
+Looking around, there is no sign of the spider, so you stop to get your breath back. 
+
 Phew - that was close!
 """
 
@@ -104,25 +106,28 @@ loom above you, its numerous legs poised to strike...
 Do you:
 """
 
-CENTIPEDE_OPTION_A = "a) Attempt to outmaneuver it with your agility"
-CENTIPEDE_OPTION_B = "b) Search for a nearby object to use as a weapon"
+CENTIPEDE_OPTION_A = "a) Attempt to outmaneuver it with your agility.\n"
+CENTIPEDE_OPTION_B = "b) Search for a nearby object to use as a weapon.\n"
 
 CENTIPEDE_OPTION_A_TEXT= """
 You weave left and right before darting between its legs, but the centipede 
 has lightning-fast reflexes and as it traps you in its claws, you feel your body 
-stiffen as the venom enters your bloodstream. The last thing you see is a pair 
-of mandibles reaching hungrily towards your head.
+stiffen as the venom enters your bloodstream. 
+
+The last thing you see is a pair of mandibles reaching hungrily towards your face.
 
 Better luck next time!
 """
 
-CENTIPEDE_OPTION_A_TEXT= """
-You search frantically for something you can use as a weapon against the 
-centipede. Remembering your laptop, you open it up and turn the screen brightness
-up to blinding, thrusting it towards the centipede's head shouting at the top of 
-your voice. 
+CENTIPEDE_OPTION_B_TEXT= """
+You look around frantically for something you can use as a weapon against the 
+centipede. 
 
-Startled by the sudden movements, noise and bright lights, the 
-centipede slinks away, allowing you to pass.
+Remembering your laptop, you open it up and turn the screen brightness
+up to blinding, thrusting it towards the centipede's head and shouting at the 
+top of your voice. 
+
+Startled by the sudden movements, noise and bright light, the centipede slinks 
+away, allowing you to pass.
 """
 

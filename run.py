@@ -101,7 +101,18 @@ def display_centipede_story():
   progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
 def display_centipede_story_choices():
-  pass
+  print(Fore.WHITE + st.CENTIPEDE_OPTIONS_TEXT)
+  print(Fore.MAGENTA + st.CENTIPEDE_OPTION_A)
+  print(Fore.CYAN + st.CENTIPEDE_OPTION_B)
+
+  player_choice_3 = get_story_choice()
+  print(f"Player choice entered is {player_choice_3}")
+  if player_choice_3 == "a":
+    print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
+  else:
+    print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
+    
+  progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
 
 def validate_restart_choice():
