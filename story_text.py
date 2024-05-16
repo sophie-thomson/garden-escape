@@ -18,8 +18,9 @@ You know you shouldn't...
 But curiosity gets the better of you and you click the button... 
 
 There is a flash and you suddenly find yourself standing amidst gigantic blades of 
-grass in a vast garden filled with towering plants and looming dangers. With no idea 
-how it happened, you slowly realise you must be no bigger than a ladybug!
+grass in a vast jungle filled with towering plants and looming dangers. With no idea 
+how it happened, you slowly realise you are still in your garden, but you are no 
+bigger than a ladybug!
 
 Thankfully you still have your laptop with you, but there is no wifi.  Your only 
 chance is to navigate through this treacherous landscape and get back to your house to 
@@ -27,8 +28,8 @@ see if you can find a way to revert to your last save before the dreaded email a
 """
 
 SPIDER_TEXT = """
-Determined to return to your normal size, you take a deep breath and cautiously make
-your way through the grass.
+Determined to make it home and return to your normal size, you take a deep breath and 
+cautiously make your way through the 20ft tall grass.
 
 As you climb between some dandelions, you spot a massive spider hanging on a thread, 
 swaying gently in the shadows above your head.
@@ -52,8 +53,9 @@ into a nearby smart sprinkler via bluetooth, causing water to spray everywhere.
 While the spider is distracted, you run for it and escape into the undergrowth.
 """
 NESTED_SPIDER_OPTIONS_TEXT = """
-As you watch in transfixed horror, the spider seems to grow twice as large as it
-in scale as it draws closer. You know you need to act fast.
+As you watch in transfixed horror, the spider seems to grow twice as large as it 
+gets closer and closer. You wish you had time to whip out your laptop and ask 
+StackOverflow what to do, but you need to act fast.
 
 Do you:\n"""
 
@@ -64,7 +66,10 @@ SPIDER_OPTION_B2 = "b) Try to reason with the spider.\n"
 SPIDER_OPTION_A2_TEXT = """
 You roll out of the way just in time, narrowly avoiding the spider's deadly strike. 
 
-You continue on your journey, heart pounding with adrenaline.
+Not stopping to check if the spider is in pursuit, you get to your feet and run as 
+hard and fast as you can until your chest feels like it's going to burst. 
+
+Phew - that was close!
 """
 
 SPIDER_OPTION_B2_TEXT = """
@@ -74,5 +79,9 @@ get home.
 
 Surprisingly, the spider seems to understand and lets you pass unharmed. 
 
-You breathe a sigh of relief and move forward, vowing that you will never harm a 
+You breathe a sigh of relief and slink away, vowing that you will never harm a 
 spider again when you get back to normality."""
+
+CENTIPEDE_STORY_TEXT = """
+Your heart is pounding with adrenaline, but eventually your 
+"""

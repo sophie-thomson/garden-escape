@@ -80,7 +80,7 @@ def display_spider_story_choices():
   else:
     import spider # displays spider ASCII Art
     print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
-
+    progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
   
 def display_nested_spider_choices():
   print(Fore.WHITE + st.NESTED_SPIDER_OPTIONS_TEXT)
@@ -96,6 +96,12 @@ def display_nested_spider_choices():
     
   progress_prompt = input(Fore.YELLOW + "Press enter to continue... \n")
 
+def display_centipede_story():
+  pass
+
+def display_centipede_story_choices():
+  pass
+
 
 def validate_restart_choice():
   pass
@@ -105,6 +111,8 @@ def main():
   start_adventure()
   display_spider_story()
   display_spider_story_choices()
+  display_centipede_story()
+  display_centipede_story_choices()
   
   
 
