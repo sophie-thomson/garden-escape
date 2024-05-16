@@ -23,7 +23,6 @@ def start_adventure():
   
 
 def run_spider_story():
-  import spider
   print(st.SPIDER_TEXT)
   print("Do you:\n")
   print(Fore.MAGENTA + st.SPIDER_OPTION_A)
@@ -45,7 +44,15 @@ def get_spider_choice():
       break # if the choice is valid (True) the break command stops the while loop
   return spider_choice
 
+def run_spider_choice():
 
+  player_choice_1 = get_spider_choice()
+  if player_choice_1 == a:
+    print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
+  else:
+    print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
+  
+  import spider
 
 def validate_story_choice(value):
   """
@@ -68,6 +75,7 @@ def main():
   get_player_name()
   start_adventure()
   run_spider_story()
+  run_spider_choice()
 
   # Title text to see before any functionality
 print("       A choose-your-own adventure story created by Sophie Thomson:")

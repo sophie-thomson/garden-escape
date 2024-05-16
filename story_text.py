@@ -20,9 +20,9 @@ There is a flash and you suddenly find yourself standing amidst gigantic blades 
 grass in a vast garden filled with towering plants and looming dangers. With no idea 
 how it happened, you slowly realise you must be no bigger than a ladybug!
 
-Thankfully you still have your laptop with you, but there is no wifi.  Your only chance 
-is to navigate through this treacherous landscape and get back to your house to see 
-if you can find a way to revert to your last save before the dreaded email arrived.
+Thankfully you still have your laptop with you, but there is no wifi.  Your only 
+chance is to navigate through this treacherous landscape and get back to your house to 
+see if you can find a way to revert to your last save before the dreaded email arrived.
 """
 
 SPIDER_TEXT = """
@@ -35,3 +35,35 @@ As you climb over a dandelion patch, you spot a massive spider lurking in the sh
 SPIDER_OPTION_A = "a) Try to sneak past the spider, hoping it doesn't notice you.\n"
 
 SPIDER_OPTION_B = "b) Create a distraction so you can make a run for it.\n"
+
+SPIDER_OPTION_A_TEXT = """
+You carefully maneuver around the spider, hoping to avoid its notice. However, 
+your movement disturbs a nearby web strand, alerting the arachnid to your presence.
+
+It lunges towards you!"""
+
+SPIDER_OPTION_B_TEXT = """
+Remembering that you have your laptop with you, you use your coding skills to hack 
+into a nearby smart sprinkler via bluetooth, causing water to spray everywhere. 
+
+While the spider is distracted, you run for it and escape into the undergrowth.
+"""
+
+SPIDER_OPTION_A2 = "a) Quickly roll out of the way.\n"
+
+SPIDER_OPTION_B2 = "b) Try to reason with the spider.\n"
+
+SPIDER_OPTION_A2_TEXT = """
+You roll out of the way just in time, narrowly avoiding the spider's deadly strike. 
+
+You continue on your journey, heart pounding with adrenaline.
+"""
+
+SPIDER_OPTION_B2_TEXT = """
+Using a combination of hand gestures and drawing in the dirt, you attempt to reason 
+with the spider, explaining your situation as a shrunken developer just trying to 
+get home. 
+
+Surprisingly, the spider seems to understand and lets you pass unharmed. 
+
+You breathe a sigh of relief and move forward."""
