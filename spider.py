@@ -1,13 +1,12 @@
 from colorama import Fore, Back, Style
-print(Fore.RED + r"""
-                                   |
-                                   |                                            
-                               ___ + ___                                      
-                             _/__/@@@\__\_                                    
+print(Fore.RED + r"""                                   |
+                                   |                      
+                               ___ + ___                  
+                             _/__/@@@\__\_              
                             /___|@@@@@|___\
-                            / ___\@@@/___ \                                       
-                            |/   (000)   \|                                  
-                             |     "     |                                       
+                            / ___\@@@/___ \                   
+                            |/   (000)   \|                      
+                             |     "     |                          
                              |           |                                 
                               \         /                                    """) 
 print(Fore.YELLOW + r"""
