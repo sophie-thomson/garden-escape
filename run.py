@@ -9,10 +9,10 @@ def get_player_name():
   Function to get gamer name from user. Will capitalise whatever name the user 
   enters.
   """
-  user_name = input("Please enter your chosen player name: \n").capitalize()
+  user_name = input(" Please enter your chosen player name: \n").capitalize()
   player = user_name
   
-  print(Fore.YELLOW + f"\nGood luck {player}!\n")  
+  print(Fore.YELLOW + f"\n Good luck {player}!\n")  
   return player
 
 def start_adventure():
@@ -20,7 +20,7 @@ def start_adventure():
   Displays the intro text for the beginning of the story and prompts player to confirm they
   are ready to start the choose-your-own adventure.
   """
-  print(Fore.CYAN +"You will need your wits about you if you are going to make it out alive!")
+  print(Fore.CYAN +" You will need your wits about you if you are going to make it out alive!")
   print(Fore.WHITE + st.INTRO_TEXT)
   # no input validation required. As long as they press enter the next function in main() runs
   start_prompt = input(Fore.YELLOW + f"Are you ready? Press enter to continue... \n")
@@ -32,7 +32,7 @@ def display_spider_story():
   Displays options for user to choose between to direct the narrative.
   """
   print(Fore.WHITE + st.SPIDER_TEXT)
-  print("Do you:\n")
+  print(" Do you:\n")
   print(Fore.MAGENTA + st.SPIDER_OPTION_A)
   print(Fore.CYAN + st.SPIDER_OPTION_B)
 
@@ -139,20 +139,18 @@ def main():
 
 
   # Title text to see before any functionality
-print("       A choose-your-own adventure story created by Sophie Thomson:")
-print(Fore.RED + figlet_format("    G A R D E N\n    E S C A P E", font = "slant"))
-print(Style.RESET_ALL + "           H o n e y   I   S h r u n k   T h e   C o d e r !")
+# print(Fore.RED + figlet_format("    G A R D E N\n    E S C A P E", font = "slant"))
+# print(Style.RESET_ALL + "           H o n e y   I   S h r u n k   T h e   C o d e r !")
 
-print(Fore.YELLOW +r"""
-                                                            *{*}*
-                                                           **{*}**           
-   d*b                                                      *{*}*            
-   d*b         )*(                                            |              
-   d*b        (***)                                           |              
-    |           |                                           \ | /            
-   \|/         \|/                                           \|/            """)
-print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
-print(Style.RESET_ALL)
+# print(Fore.YELLOW +r"""                                                                   
+#    d*b                                                      *(*)*           
+#    d*b         )*(                                         **(*)**                 
+#    d*b        (***)                                         *(*)*             """) 
+# print(Fore.GREEN + r"""    |    |      |           |               |    |          _ | _       |     
+#    \|/   ||    \|/     |    | |         |  ||    |    ||     \|/     |  | ||  """)
+# print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+# print(Style.RESET_ALL)
+import title # displays main title ASCII Art
 main()
 
 
