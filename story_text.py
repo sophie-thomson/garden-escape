@@ -96,8 +96,9 @@ SPIDER_OPTION_B2_TEXT = """
 CENTIPEDE_STORY_TEXT = """
  Having made it past the spider, you feel pretty good about your progress, but 
  you are getting hungry. You think dreamily of your stash of trail mix and 
- chocolate buttons that keep you going through those long hours of debugging, 
- and wonder if you'll ever get to use your 'World's #0 Programmer' mug again.
+ chocolate buttons that keep you going through those long hours of debugging.
+ 
+ You wonder if you'll ever get to use your 'World's #0 Programmer' mug again.
 
  Lost in your thoughts, you don't notice the movement in the house-sized 
  plant pots up ahead.
