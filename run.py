@@ -9,7 +9,7 @@ def get_player_name():
   Function to get gamer name from user. Will capitalise whatever name the user 
   enters.
   """
-  user_name = input("Please enter your chosen player name: \n\n").capitalize()
+  user_name = input("Please enter your chosen player name: \n").capitalize()
   player = user_name
   
   print(Fore.YELLOW + f"\nGood luck {player}!\n")  
@@ -151,7 +151,7 @@ print(Fore.YELLOW +r"""
    d*b        (***)                                           |              
     |           |                                           \ | /            
    \|/         \|/                                           \|/            """)
-print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
 print(Style.RESET_ALL)
 main()
 
