@@ -75,8 +75,8 @@ SPIDER_OPTION_A2_TEXT = """
  Phew - that was close!
 
  Not stopping to check if the spider is in pursuit, you get to your feet and
- run as hard and fast as you can until your chest feels like it's going to 
- burst. 
+ run in the direction of the house as fast as you can, stumbling and tripping 
+ over roots and dirt piles until your chest feels like it's going to burst. 
 
  Looking around, there is no sign of the spider behind you, so you stop 
  running. Doubled over and gasping for breath, you vow to get up early and 

@@ -2,17 +2,17 @@ from colorama import Fore, Back, Style
 print(Fore.RED + r"""
                                                                                                   
                                                           |
-                          ,,                              |____________________
+                          ,,                              |___________________
                          (@@)                             |
                          [""]                             |                   """)
-print(Fore.YELLOW + r"""                        /-[]-\                            |____________________       
-                        /-[]-\                            |                          
+print(Fore.YELLOW + r"""                        /-[]-\                            |___________________
+                        /-[]-\                            |                   
                         /-[]-\                            |        
-                       /-[]-\                             |____________________        
+                       /-[]-\                             |___________________
                       /-[]-\                {}            |       
                     /-[]-\              /-[]-\            \             
-                      /-[]-\          /-[]-\               \                      
+                      /-[]-\          /-[]-\               \                  
                         /-[][][][][][][]-\                  \        
-                           \  \  \  \  \                     \_________________""")       
-print(Fore.GREEN + r"MMMMmmmmmmmmMMMMMmmMMmMmMMMMMmmmMMMmMmmmMMMMmmmmMMmMMMMMMmMMMMMMMMmMMMMMmmmMMMM")
-print("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+                           \  \  \  \  \                     \________________""")       
+print(Fore.GREEN + r"MMMMmmmmmmmmMMMMMmmMMmMmMMMMMmmmMMMmMmmmMMMMmmmmMMmMMMMMMmMMMMMMMMmMMMMMmmmM")
+print("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
