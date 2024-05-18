@@ -156,6 +156,43 @@ RAKE_STORY_TEXT = """
 """
 
 RAKE_OPTIONS_TEXT = """
- A sudden gust of wind swings the door open, sending the rake tumbling towards you! 
+ A sudden gust of wind swings the door open, sending the rake tumbling 
+ towards you!
+
+ Do you:
+"""
+
+RAKE_OPTION_A = " a) Run back the way you came, losing ground but hopefully avoiding\n the path of the falling rake.\n"
+RAKE_OPTION_B = " b) Watch the rake fall, trying to judge its trajectory before choosing\n which direction to jump in.\n"
+
+RAKE_OPTION_A_TEXT = """
+ You race through the grass away from the house, watching the shadow of the 
+ rake grow around you as it hurtles towards you. 
+ 
+ You can see the light on the ground ahead beyond the reach of the shadow, 
+ and you think you might just make it, when a flurry of feathers and a sharp 
+ beak snatch you up and you are swallowed in one gulp by a passing Magpie.
+"""
+
+RAKE_OPTION_B_TEXT = """
+ Miraculously, you narrowly avoid the rake's deadly prongs and long handle as 
+ they come crashing to the ground. However, the impact of the fall has thrown 
+ you into the air and you are now hurtling towards your kitchen!
+
+ Do you:
+"""
+
+RAKE_OPTION_A2 = " a) Open up your laptop and hold it above your head hoping it\n will work as a glider.\n"
+RAKE_OPTION_B2 = " b) Tuck your knees up to your chest ready to perform a stunt\n roll onto the kitchen floor.\n"
+
+RAKE_OPTION_A2_TEXT = """
+Amazingly your trusty laptop catches the breeze and you land with an 
+undignified bump on the kitchen worktop.
+"""
+
+RAKE_OPTION_B2_TEXT ="""
+Well your stunt training might have worked if not for a passing Magpie. 
+You hear a flurry of feathers, and before you can look round a sharp beak 
+snatches you up and swallows you up in one gulp.
 """
 

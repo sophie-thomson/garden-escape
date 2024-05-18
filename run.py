@@ -165,7 +165,18 @@ def display_rake_story_choices():
   If valid, the choice is returned to this function for the program to display the 
   next block of story text depending on the chosen outcome along with some ASCII art.
   """
-  pass
+  print(Fore.WHITE + st.RAKE_OPTIONS_TEXT)
+  print(Fore.MAGENTA + st.RAKE_OPTION_A)
+  print(Fore.CYAN + st.RAKE_OPTION_B)
+
+  player_choice = get_story_choice()
+  import rake # displays centipede ASCII Art
+  if player_choice == "a":
+    print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
+  else:
+    print(Fore.WHITE + st.RAKE_OPTION_B_TEXT)
+    
+  progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
 
 def validate_restart_choice():
