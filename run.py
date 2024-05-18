@@ -140,6 +140,9 @@ def display_centipede_story_choices():
   import centipede # displays centipede ASCII Art
   if player_choice == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
+    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+ print(st.CENTIPEDE_GAME_OVER)The last thing you see is a pair of mandibles reaching hungrily towards your 
+ face.
     game_over ()
   else:
     print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
@@ -178,8 +181,9 @@ def display_rake_story_choices():
     game_over ()
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B_TEXT)
-    
-  progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    display_nested_rake_choices()
+  
 
 def display_nested_rake_choices():
   """
@@ -196,10 +200,10 @@ def display_nested_rake_choices():
   player_choice = get_story_choice()
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
+    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
-    
-  progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    game_over()
 
 
 def game_over():
@@ -257,20 +261,9 @@ def main():
   display_spider_story()
   display_centipede_story()
   display_rake_story()
-  
-  
-  
 
 
-
-
-
-
-
-
-
-
-  # Title text to see before any functionality
+# Title text to see before any functionality
 import title # displays main title ASCII Art
 main()
 

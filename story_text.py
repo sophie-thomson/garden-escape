@@ -124,11 +124,14 @@ CENTIPEDE_OPTION_B = " b) Search for a nearby object to use as a weapon.\n"
 CENTIPEDE_OPTION_A_TEXT= """
  You weave left and right before darting between its legs, but the centipede 
  has lightning-fast reflexes and as it traps you in its claws, you feel your 
- body stiffen as the venom enters your bloodstream. 
+ body stiffen as the venom enters your bloodstream.
 
- The last thing you see is a pair of mandibles reaching hungrily towards your 
- face.
+ Will you escape?
 """
+CENTIPEDE_GAME_OVER_TEXT = """ 
+ Sadly not. The centipede is not letting you go and the last thing you see 
+ is a pair of glistening mandibles reaching hungrily towards your face.
+ """
 
 CENTIPEDE_OPTION_B_TEXT= """
  You look around frantically for something you can use as a weapon against 
