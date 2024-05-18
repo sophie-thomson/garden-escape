@@ -1,8 +1,7 @@
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 from pyfiglet import figlet_format
 from colorama import Fore, Back, Style
 import story_text as st
+
 
 def get_player_name():
   """
@@ -15,6 +14,7 @@ def get_player_name():
   print(Fore.YELLOW + f"\n Good luck {player}!\n")  
   return player
 
+
 def start_adventure():
   """
   Displays the intro text for the beginning of the story and prompts player to confirm they
@@ -23,23 +23,9 @@ def start_adventure():
   print(Fore.CYAN +" You will need your wits about you if you are going to make it out alive!")
   print(Fore.WHITE + st.INTRO_TEXT)
   # no input validation required. As long as they press enter the next function in main() runs
-  start_prompt = input(Fore.YELLOW + f" Are you ready? Press enter to continue... \n")
+  start_prompt = input(Fore.YELLOW + f" Are you ready? Press enter to continue... \n")  
   
 
-def display_spider_story():
-  """
-  Displays narrative text from story_text file to set the scene for spider section.
-  Displays options for player to choose between to direct the narrative and runs the 
-  display_spider_story_choices function for the play to see the outcome of their choice.
-  """
-  print(Fore.WHITE + st.SPIDER_TEXT)
-  print(" Do you:\n")
-  print(Fore.MAGENTA + st.SPIDER_OPTION_A)
-  print(Fore.CYAN + st.SPIDER_OPTION_B)
-
-  display_spider_story_choices()
-
-  
 def get_story_choice():
   """
   Function to get choice input from user.
@@ -70,10 +56,30 @@ def validate_story_choice(value):
   return True #if function runs without any errors, then returns True
 
 
+def display_spider_story():
+  """
+  Displays narrative text from story_text file to set the scene for spider section.
+  Displays options for player to choose between to direct the narrative and runs the 
+  display_spider_story_choices function for the player to make their choice.
+  """
+  print(Fore.WHITE + st.SPIDER_TEXT)
+  print(" Do you:\n")
+  print(Fore.MAGENTA + st.SPIDER_OPTION_A)
+  print(Fore.CYAN + st.SPIDER_OPTION_B)
+
+  display_spider_story_choices()
+
+
 def display_spider_story_choices():
-  player_choice_1 = get_story_choice()
-  print(f"Player choice entered is {player_choice_1}")
-  if player_choice_1 == "a":
+  """
+  Runs get_story_choice function for player to enter their chosen story option and 
+  for the choice to be validated (validate_story_choice).
+
+  If valid, the choice is returned to this function for the program to display the 
+  next block of story text depending on the chosen outcome along with some ASCII art.
+  """
+  player_choice = get_story_choice()
+  if player_choice == "a":
     import spider # displays spider ASCII Art
     print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
@@ -83,47 +89,88 @@ def display_spider_story_choices():
     print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
   
+
 def display_nested_spider_choices():
+  """
+  Runs get_story_choice function for player to enter their chosen story option and 
+  for the choice to be validated (validate_story_choice).
+
+  If valid, the choice is returned to this function for the program to display the 
+  next block of story text depending on the chosen outcome along with some ASCII art.
+  """
   print(Fore.WHITE + st.NESTED_SPIDER_OPTIONS_TEXT)
   print(Fore.MAGENTA + st.SPIDER_OPTION_A2)
   print(Fore.CYAN + st.SPIDER_OPTION_B2)
 
-  player_choice_2 = get_story_choice()
-  if player_choice_2 == "a":
+  player_choice = get_story_choice()
+  if player_choice == "a":
     print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
   else:
     print(Fore.WHITE + st.SPIDER_OPTION_B2_TEXT)
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
+
 def display_centipede_story():
+  """
+  Displays narrative text from story_text file to set the scene for centipede section.
+  Displays options for player to choose between to direct the narrative and runs the 
+  display_centipede_story_choices function for the player to make their choice.
+  """
   print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
   display_centipede_story_choices()
 
+
 def display_centipede_story_choices():
+  """
+  Runs get_story_choice function for player to enter their chosen story option and 
+  for the choice to be validated (validate_story_choice).
+
+  If valid, the choice is returned to this function for the program to display the 
+  next block of story text depending on the chosen outcome along with some ASCII art.
+  """
   print(Fore.WHITE + st.CENTIPEDE_OPTIONS_TEXT)
   print(Fore.MAGENTA + st.CENTIPEDE_OPTION_A)
   print(Fore.CYAN + st.CENTIPEDE_OPTION_B)
 
-  player_choice_3 = get_story_choice()
+  player_choice = get_story_choice()
   import centipede # displays centipede ASCII Art
-  if player_choice_3 == "a":
+  if player_choice == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
   else:
     print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
+
 def display_rake_story():
-  pass
+  """
+  Displays narrative text from story_text file to set the scene for rake section.
+  Displays options for player to choose between to direct the narrative and runs the 
+  display_spider_story_choices function for the player to make their choice.
+  """
+  print(Fore.WHITE + st.RAKE_STORY_TEXT)
+  progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+
+  display_rake_story_choices()
+
 
 def display_rake_story_choices():
- pass
+  """
+  Runs get_story_choice function for player to enter their chosen story option and 
+  for the choice to be validated (validate_story_choice).
+
+  If valid, the choice is returned to this function for the program to display the 
+  next block of story text depending on the chosen outcome along with some ASCII art.
+  """
+  pass
+
 
 def validate_restart_choice():
   pass
+
 
 def main():
   player = get_player_name()
