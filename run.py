@@ -29,14 +29,16 @@ def start_adventure():
 def display_spider_story():
   """
   Displays narrative text from story_text file to set the scene for spider section.
-  Displays options for user to choose between to direct the narrative.
+  Displays options for player to choose between to direct the narrative and runs the 
+  display_spider_story_choices function for the play to see the outcome of their choice.
   """
   print(Fore.WHITE + st.SPIDER_TEXT)
   print(" Do you:\n")
   print(Fore.MAGENTA + st.SPIDER_OPTION_A)
   print(Fore.CYAN + st.SPIDER_OPTION_B)
 
-  # get_spider_choice()
+  display_spider_story_choices()
+
   
 def get_story_choice():
   """
@@ -47,7 +49,7 @@ def get_story_choice():
   while True:
     print(Fore.WHITE + " Choose wisely...\n")
     story_choice = input(Fore.YELLOW + " Enter a or b: \n").lower() 
-    if validate_story_choice(story_choice): #spider_choice is the data that we want to check
+    if validate_story_choice(story_choice): #story_choice is the data that we want to check
       break # if the choice is valid (True) the break command stops the while loop
     
   return story_choice
@@ -87,7 +89,6 @@ def display_nested_spider_choices():
   print(Fore.CYAN + st.SPIDER_OPTION_B2)
 
   player_choice_2 = get_story_choice()
-  # print(f"Player choice entered is {player_choice_2}")
   if player_choice_2 == "a":
     print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
   else:
@@ -99,6 +100,8 @@ def display_centipede_story():
   print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
+  display_centipede_story_choices()
+
 def display_centipede_story_choices():
   print(Fore.WHITE + st.CENTIPEDE_OPTIONS_TEXT)
   print(Fore.MAGENTA + st.CENTIPEDE_OPTION_A)
@@ -106,7 +109,6 @@ def display_centipede_story_choices():
 
   player_choice_3 = get_story_choice()
   import centipede # displays centipede ASCII Art
-  # print(f"Player choice entered is {player_choice_3}")
   if player_choice_3 == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
   else:
@@ -114,6 +116,11 @@ def display_centipede_story_choices():
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
+def display_rake_story():
+  pass
+
+def display_rake_story_choices():
+ pass
 
 def validate_restart_choice():
   pass
@@ -122,9 +129,11 @@ def main():
   player = get_player_name()
   start_adventure()
   display_spider_story()
-  display_spider_story_choices()
+  #display_spider_story_choices()
   display_centipede_story()
-  display_centipede_story_choices()
+  #display_centipede_story_choices()
+  display_rake_story()
+  #display_rake_story_choices()
   
   
 
@@ -138,17 +147,6 @@ def main():
 
 
   # Title text to see before any functionality
-# print(Fore.RED + figlet_format("    G A R D E N\n    E S C A P E", font = "slant"))
-# print(Style.RESET_ALL + "           H o n e y   I   S h r u n k   T h e   C o d e r !")
-
-# print(Fore.YELLOW +r"""                                                                   
-#    d*b                                                      *(*)*           
-#    d*b         )*(                                         **(*)**                 
-#    d*b        (***)                                         *(*)*             """) 
-# print(Fore.GREEN + r"""    |    |      |           |               |    |          _ | _       |     
-#    \|/   ||    \|/     |    | |         |  ||    |    ||     \|/     |  | ||  """)
-# print(Fore.GREEN + r"||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
-# print(Style.RESET_ALL)
 import title # displays main title ASCII Art
 main()
 

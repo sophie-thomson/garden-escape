@@ -140,3 +140,22 @@ CENTIPEDE_OPTION_B_TEXT= """
  slinks away, allowing you to pass.
 """
 
+RAKE_STORY_TEXT = """
+ You push onwards towards the huge silhouette of your house, but you are 
+ exhausted and starving and the sun is getting lower in the sky. You shudder 
+ to think what it would be like to be stuck out here at night! 
+
+ As you get closer to the back of your house, you start to think you might 
+ actually make it through this nightmare if you can just figure out how on 
+ earth to get in through the back door.
+
+ You think you may have left the back door ajar, but you can't quite tell 
+ from this distance over the top of the huge plants and leaves. While you 
+ are pondering your next move, you have forgotten all about the rake propped 
+ against your back door.
+"""
+
+RAKE_OPTIONS_TEXT = """
+ A sudden gust of wind swings the door open, sending the rake tumbling towards you! 
+"""
+
