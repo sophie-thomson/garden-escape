@@ -172,9 +172,13 @@ RAKE_OPTION_A_TEXT = """
  You race through the grass away from the house, watching the shadow of the 
  rake grow around you as it hurtles towards you. 
  
- You can see the light on the ground ahead beyond the reach of the shadow, 
- and you think you might just make it, when a flurry of feathers and a sharp 
- beak snatch you up and you are swallowed in one gulp by a passing Magpie.
+ You can see sunlight on the ground ahead beyond the reach of the rake's
+ shadow. If you can keep going, you might just do it!
+"""
+RAKE_GAME_OVER_TEXT = """
+ Just when you think you're safe, you hear a flurry of feathers and only 
+ have time to register the light reflecting on the huge sharp beak before 
+ you are snatched up and swallowed whole.
 """
 
 RAKE_OPTION_B_TEXT = """
@@ -195,14 +199,30 @@ RAKE_OPTION_A2 = " a) Open up your laptop and hold it above your head hoping it\
 RAKE_OPTION_B2 = " b) Tuck your knees up to your chest ready to perform a stunt\n roll onto the kitchen floor.\n"
 
 RAKE_OPTION_A2_TEXT = """
-Amazingly your trusty laptop catches the breeze and lifts you higher into the
-air before you land with an undignified bump on the kitchen worktop.
+ Amazingly your trusty laptop catches the breeze and lifts you higher into the
+ air before dropping you with an undignified bump onto the kitchen worktop.
+
+ You lay there, dazed for a moment catching your breath as it dawns on you 
+ that you have finally made it home!
+
+ Heart racing, you open your laptop to check if it's still working. You 
+ are beyond relieved to see your home screen jump to life, and you waste no 
+ time connecting to the wifi and drilling down through your settings to roll 
+ back to your last backup before the email.
 """
 
 RAKE_OPTION_B2_TEXT ="""
-Well your stunt training might have worked if not for a passing Magpie!
+ Well your stunt training might have worked if not for a passing Magpie!
 
-You hear a flurry of feathers, but before you can look round a sharp beak 
-snatches you up and swallows you up in one gulp.
+ You hear a flurry of feathers, but before you can look round a sharp beak 
+ snatches you up and swallows you up in one gulp.
 """
+CONGRATULATIONS_TEXT = """
+ At that moment, your neighbour arrives at your back door to return the drill 
+ they borrowed. Staring at you quizzically, they are clearly wondering why 
+ you are sitting on your worktop covered in mud, scratches and grass stains!
 
+ Glancing at your grazed knees, you throw your head back and laugh until tears 
+ roll down your cheeks. Your neighbour quietly crosses the kitchen and puts the 
+ kettle on...
+"""

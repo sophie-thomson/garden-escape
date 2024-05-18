@@ -141,8 +141,7 @@ def display_centipede_story_choices():
   if player_choice == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
- print(st.CENTIPEDE_GAME_OVER)The last thing you see is a pair of mandibles reaching hungrily towards your 
- face.
+    print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
     game_over ()
   else:
     print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
@@ -178,6 +177,8 @@ def display_rake_story_choices():
   import rake # displays centipede ASCII Art
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
+    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
     game_over ()
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B_TEXT)
@@ -201,6 +202,7 @@ def display_nested_rake_choices():
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    print(Fore.WHITE + st.CONGRATULATIONS_TEXT)
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
     game_over()
