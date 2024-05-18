@@ -1,6 +1,7 @@
 from pyfiglet import figlet_format
 from colorama import Fore, Back, Style
 import story_text as st
+import importlib
 
 
 def get_player_name():
@@ -139,6 +140,7 @@ def display_centipede_story_choices():
   import centipede # displays centipede ASCII Art
   if player_choice == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
+    game_over ()
   else:
     print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
     
@@ -173,14 +175,53 @@ def display_rake_story_choices():
   import rake # displays centipede ASCII Art
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
+    game_over ()
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B_TEXT)
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
 
-def validate_restart_choice():
-  pass
+def game_over():
+  print(Fore.RED + figlet_format("G A M E  O V E R", font = "slant"))
+  player_restart_choice = get_restart_choice()
+
+  if player_restart_choice == "y":
+    importlib.reload(title) # reloads main title ASCII Art
+    main()
+  else:
+    print(Fore.WHITE + "               T h a n k   y o u   f o r   p l a y i n g !\n\n")
+    exit()
+
+
+def get_restart_choice():
+  """
+  Function to get choice input from user.
+  Run a while loop to collect a valid entry of y or n from the user 
+  via the terminal. The loop will repeatedly request data, until it is valid.
+  """
+  while True:
+    print(Fore.WHITE + " Better luck next time!\n Would you like to start again?\n")
+    restart_choice = input(Fore.YELLOW + " Enter y or n: \n").lower()
+    if validate_restart_choice(restart_choice): #restart_choice is the data that we want to check
+      break # if the choice is valid (True) the break command stops the while loop
+    
+  return restart_choice
+
+
+def validate_restart_choice(value):
+  """
+  Validates if the player enters a story choice value that is either 'a' or 'b'.
+  Inside the try, raises a ValueError if the player enters a value that is not a or b.
+  """
+  try:
+    if value not in ["y", "n"]:
+     raise ValueError(Fore.RED + f"A single letter 'y' or 'n' is required. You entered '{value}'.")
+  except ValueError as e:
+    print(Fore.RED + f" Invalid entry. {e} \nPlease try again.")
+    return False #if error is raised, returns False
+    
+  return True #if function runs without any errors, then returns True
 
 
 def main():
