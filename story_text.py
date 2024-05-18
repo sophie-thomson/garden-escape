@@ -176,8 +176,14 @@ RAKE_OPTION_A_TEXT = """
 
 RAKE_OPTION_B_TEXT = """
  Miraculously, you narrowly avoid the rake's deadly prongs and long handle as 
- they come crashing to the ground. However, the impact of the fall has thrown 
+ they come crashing to the ground. However, the impact of the fall has flung 
  you into the air and you are now hurtling towards your kitchen!
+"""
+
+NESTED_RAKE_OPTIONS_TEXT = """
+ Thankfully you can see that the kitchen door is wide open and you are flying 
+ straight towards it, but at this rate you will be hitting the kitchen 
+ cupboard with enough force to cause some serious injuries!
 
  Do you:
 """
@@ -186,13 +192,14 @@ RAKE_OPTION_A2 = " a) Open up your laptop and hold it above your head hoping it\
 RAKE_OPTION_B2 = " b) Tuck your knees up to your chest ready to perform a stunt\n roll onto the kitchen floor.\n"
 
 RAKE_OPTION_A2_TEXT = """
-Amazingly your trusty laptop catches the breeze and you land with an 
-undignified bump on the kitchen worktop.
+Amazingly your trusty laptop catches the breeze and lifts you higher into the
+air before you land with an undignified bump on the kitchen worktop.
 """
 
 RAKE_OPTION_B2_TEXT ="""
-Well your stunt training might have worked if not for a passing Magpie. 
-You hear a flurry of feathers, and before you can look round a sharp beak 
+Well your stunt training might have worked if not for a passing Magpie!
+
+You hear a flurry of feathers, but before you can look round a sharp beak 
 snatches you up and swallows you up in one gulp.
 """
 

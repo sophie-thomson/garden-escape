@@ -29,9 +29,9 @@ def start_adventure():
 
 def get_story_choice():
   """
-  Function to get choice input from user.
-  Run a while loop to collect a valid entry of a or b from the user 
-  via the terminal. The loop will repeatedly request data, until it is valid.
+  Function to get story choice input from user.
+  Run a while loop to collect a valid entry of a or b from the user via the terminal. 
+  The loop will repeatedly request data, until it is valid.
   """
   while True:
     print(Fore.WHITE + " Choose wisely...\n")
@@ -181,17 +181,44 @@ def display_rake_story_choices():
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
+def display_nested_rake_choices():
+  """
+  Runs get_story_choice function for player to enter their chosen story option and 
+  for the choice to be validated (validate_story_choice).
+
+  If valid, the choice is returned to this function for the program to display the 
+  next block of story text depending on the chosen outcome along with some ASCII art.
+  """
+  print(Fore.WHITE + st.NESTED_RAKE_OPTIONS_TEXT)
+  print(Fore.MAGENTA + st.RAKE_OPTION_A2)
+  print(Fore.CYAN + st.RAKE_OPTION_B2)
+
+  player_choice = get_story_choice()
+  if player_choice == "a":
+    print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
+  else:
+    print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
+    
+  progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+
 
 def game_over():
+  """
+  Displays game over title and invites the player to choose whether to start again
+  or finish the game at that point.
+
+  Choosing to finish the game includes an exit() function to stop the program from
+  continuing to run the next block of code in main().
+  """
   print(Fore.RED + figlet_format("G A M E  O V E R", font = "slant"))
   player_restart_choice = get_restart_choice()
 
   if player_restart_choice == "y":
     importlib.reload(title) # reloads main title ASCII Art
-    main()
+    main() # re-starts the game from the beginning
   else:
     print(Fore.WHITE + "               T h a n k   y o u   f o r   p l a y i n g !\n\n")
-    exit()
+    exit() # exits the program
 
 
 def get_restart_choice():
@@ -228,11 +255,9 @@ def main():
   player = get_player_name()
   start_adventure()
   display_spider_story()
-  #display_spider_story_choices()
   display_centipede_story()
-  #display_centipede_story_choices()
   display_rake_story()
-  #display_rake_story_choices()
+  
   
   
 
