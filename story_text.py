@@ -50,8 +50,8 @@ SPIDER_OPTION_B_TEXT = """
  Remembering that you have your laptop with you, you use your coding skills to 
  hack into a nearby smart sprinkler, causing water to spray everywhere. You 
  are now soaking wet, but while the spider is distracted, you run for it and 
- escape into the undergrowth.
-"""
+ escape into the undergrowth. """
+ 
 NESTED_SPIDER_OPTIONS_TEXT = """
  You watch, transfixed in horror, as the spider stretches it's legs and drops
  towards you. 
@@ -62,7 +62,8 @@ NESTED_SPIDER_OPTIONS_TEXT = """
  You wish you had time to whip out your laptop and ask StackOverflow what to 
  do, but you need to act fast.
 
- Do you:\n"""
+ Do you:\n
+ """
 
 SPIDER_OPTION_A2 = " a) Quickly roll out of the way.\n"
 
@@ -93,7 +94,8 @@ SPIDER_OPTION_B2_TEXT = """
  Surprisingly, the spider seems to understand and lets you pass unharmed. 
 
  You breathe a sigh of relief and hurry away, vowing that you will never harm 
- a spider again when you get back to normality."""
+ a spider again when you get back to normality.
+ """
 
 CENTIPEDE_STORY_TEXT = """
  Having made it past the spider, you feel pretty good about your progress, but 
@@ -219,7 +221,7 @@ RAKE_OPTION_B2_TEXT ="""
  You hear a flurry of feathers, but before you can look round a sharp beak 
  snatches you up and swallows you up in one gulp.
 """
-CONGRATULATIONS_TEXT = """
+END_TEXT = """
  At that moment, your neighbour arrives at your back door to return the drill 
  they borrowed. Staring at you quizzically, they are clearly wondering why 
  you are sitting on your worktop covered in mud, scratches and grass stains!

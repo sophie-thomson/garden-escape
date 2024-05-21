@@ -36,7 +36,7 @@ def get_story_choice():
   The loop will repeatedly request data, until it is valid.
   """
   while True:
-    print(Fore.WHITE + Style.NORMAL + " Choose wisely...\n")
+    print(Fore.WHITE + Style.NORMAL + f" Choose wisely...\n")
     story_choice = input(Fore.YELLOW + " Enter a or b: \n").lower() 
     if validate_story_choice(story_choice): #story_choice is the data that we want to check
       break # if the choice is valid (True) the break command stops the while loop
@@ -215,11 +215,11 @@ def display_nested_rake_choices():
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
-    print(Fore.WHITE + st.CONGRATULATIONS_TEXT)
-    print(Fore.YELLOW + figlet_format("   Congratulations!", font = "small"))
-    print("             Y o u   E s c a p e d   T h e   G a r d e n !\n\n")
-    print(Fore.WHITE + "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
-    exit() # exits the program
+    print(Fore.WHITE + st.END_TEXT)
+    # print(Fore.YELLOW + figlet_format("   Congratulations!", font = "small"))
+    # print("             Y o u   E s c a p e d   T h e   G a r d e n !\n\n")
+    # print(Fore.WHITE + "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
+    # exit() # exits the program
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
     game_over()
@@ -244,14 +244,14 @@ def game_over():
     exit() # exits the program
 
 
-def get_restart_choice(player_name):
+def get_restart_choice():
   """
   Function to get choice input from user.
   Run a while loop to collect a valid entry of y or n from the user 
   via the terminal. The loop will repeatedly request data, until it is valid.
   """
   while True:
-    print(Fore.WHITE + f" Better luck next time {player_name}!\n\n Would you like to start again?\n")
+    print(Fore.WHITE + f" Better luck next time!\n\n Would you like to start again?\n")
     restart_choice = input(Fore.YELLOW + " Enter y or n: \n").lower()
     if validate_restart_choice(restart_choice): #restart_choice is the data that we want to check
       break # if the choice is valid (True) the break command stops the while loop
@@ -280,6 +280,10 @@ def main():
   display_spider_story()
   display_centipede_story()
   display_rake_story()
+  print(Fore.YELLOW + figlet_format(f"   Congratulations\n    {player_name}!", font = "small"))
+  print(Fore.CYAN +"             Y o u   E s c a p e d   T h e   G a r d e n !\n")
+  print(Fore.WHITE + "               T h a n k   Y o u   F o r   P l a y i n g !\n")
+  exit() # exits the program
 
 
 # Title text to see before any functionality
