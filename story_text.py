@@ -51,7 +51,7 @@ SPIDER_OPTION_B_TEXT = """
  hack into a nearby smart sprinkler, causing water to spray everywhere. You 
  are now soaking wet, but while the spider is distracted, you run for it and 
  escape into the undergrowth. """
- 
+
 NESTED_SPIDER_OPTIONS_TEXT = """
  You watch, transfixed in horror, as the spider stretches it's legs and drops
  towards you. 
@@ -227,6 +227,5 @@ END_TEXT = """
  you are sitting on your worktop covered in mud, scratches and grass stains!
 
  Glancing at your grazed knees, you throw your head back and laugh until tears 
- roll down your cheeks. Your neighbour quietly crosses the kitchen and puts the 
- kettle on...
+ roll down your cheeks.
 """

@@ -10,11 +10,36 @@ def get_player_name():
   Function to get gamer name from user. Will capitalise whatever name the user 
   enters.
   """
-  user_name = input(" Please enter your chosen player name: \n").capitalize()
-  player = user_name
+  while True:
+    user_name = input(Fore.WHITE + " Please enter your chosen player name: \n").capitalize()
+    player = user_name
+    if validate_player_name(player): #player is the data that we want to check
+      break # if the name is valid (True) the break command stops the while loop
   
-  print(Fore.YELLOW + f"\n Good luck {player}!\n")  
+  print(Fore.YELLOW + f"\n Good luck {player}!\n")
   return player
+
+
+def validate_player_name(name):
+  """
+  Checks that the player enters at least one character as a name, but also checks
+  that the length of the name is no more than 16 characters so it will fit on the
+  congratulations window if they make it to the end.
+
+  The name can be anything they want, so there is no validation to check if they
+  have entered any sybmols or numbers.
+  """
+  try:
+    length = len(name)
+    if length < 1 or length > 16:
+      raise ValueError(Fore.RED +
+        f"Name must be between 1 - 16 characters, your name has {length} characters"
+      )
+  except ValueError as e:
+    print(Fore.RED + f"Invalid data: {e}, please try again.\n")
+    return False #if error is raised, returns False
+    
+  return True #if function runs without any errors, then returns True 
 
 
 def start_adventure(player_name):
