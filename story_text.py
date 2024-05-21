@@ -43,21 +43,21 @@ SPIDER_OPTION_B = " b) Create a distraction so you can make a run for it.\n"
 SPIDER_OPTION_A_TEXT = """
  You carefully manoeuver around the spider, hoping to avoid its notice. 
  However, your movement disturbs a nearby web strand, alerting the arachnid to 
- your presence. 
-
- You freeze, paralysed in fear as the spider fixes all 8 of its beady eyes on 
- you and steadily starts to descend..."""
+ your presence. The spider fixes all 8 of its beady eyes on you and steadily 
+ starts to descend..."""
 
 SPIDER_OPTION_B_TEXT = """
  Remembering that you have your laptop with you, you use your coding skills to 
- hack into a nearby smart sprinkler, causing water to spray everywhere.
-
- You are now soaking wet, but while the spider is distracted, you run for it 
- and escape into the undergrowth.
+ hack into a nearby smart sprinkler, causing water to spray everywhere. You 
+ are now soaking wet, but while the spider is distracted, you run for it and 
+ escape into the undergrowth.
 """
 NESTED_SPIDER_OPTIONS_TEXT = """
- As you watch, transfixed in horror, the spider seems to double in size as it 
- gets closer and closer. 
+ You watch, transfixed in horror, as the spider stretches it's legs and drops
+ towards you. 
+ 
+ It seems to double in size as it gets closer and you can clearly
+ see a pair of fangs glistening in the sunlight.
 
  You wish you had time to whip out your laptop and ask StackOverflow what to 
  do, but you need to act fast.
@@ -79,7 +79,9 @@ SPIDER_OPTION_A2_TEXT = """
  over roots and dirt piles until your chest feels like it's going to burst. 
 
  Looking around, there is no sign of the spider behind you, so you stop 
- running. Doubled over and gasping for breath, you vow to get up early and 
+ running. 
+ 
+ Doubled over and gasping for breath, you vow to get up early and 
  hit the gym more often if you ever make it out of this mess.
 """
 
@@ -100,8 +102,8 @@ CENTIPEDE_STORY_TEXT = """
  
  You wonder if you'll ever get to use your 'World's #0 Programmer' mug again.
 
- Lost in your thoughts, you don't notice the movement in the house-sized 
- plant pots up ahead.
+ Lost in your thoughts, you don't notice a movement in the house-sized plant 
+ pots up ahead.
 
  Suddenly a gigantic centipede as long as a street lamp scuttles out from 
  behind your favourite glazed blue pot. You watch in terror as it meanders 

@@ -1,6 +1,7 @@
 from pyfiglet import figlet_format
 from colorama import Fore, Back, Style
 import story_text as st
+import story_separator as ss
 import importlib
 
 
@@ -16,7 +17,7 @@ def get_player_name():
   return player
 
 
-def start_adventure():
+def start_adventure(player_name):
   """
   Displays the intro text for the beginning of the story and prompts player to confirm they
   are ready to start the choose-your-own adventure.
@@ -24,7 +25,8 @@ def start_adventure():
   print(Fore.CYAN +" You will need your wits about you if you are going to make it out alive!")
   print(Fore.WHITE + st.INTRO_TEXT)
   # no input validation required. As long as they press enter the next function in main() runs
-  start_prompt = input(Fore.YELLOW + f" Are you ready? Press enter to continue... \n")  
+  start_prompt = input(Fore.YELLOW + f" Are you ready {player_name}? Press enter to continue... \n")
+
   
 
 def get_story_choice():
@@ -34,7 +36,7 @@ def get_story_choice():
   The loop will repeatedly request data, until it is valid.
   """
   while True:
-    print(Fore.WHITE + " Choose wisely...\n")
+    print(Fore.WHITE + Style.NORMAL + " Choose wisely...\n")
     story_choice = input(Fore.YELLOW + " Enter a or b: \n").lower() 
     if validate_story_choice(story_choice): #story_choice is the data that we want to check
       break # if the choice is valid (True) the break command stops the while loop
@@ -63,9 +65,10 @@ def display_spider_story():
   Displays options for player to choose between to direct the narrative and runs the 
   display_spider_story_choices function for the player to make their choice.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.SPIDER_TEXT)
   print(" Do you:\n")
-  print(Fore.MAGENTA + st.SPIDER_OPTION_A)
+  print(Fore.MAGENTA + Style.BRIGHT + st.SPIDER_OPTION_A)
   print(Fore.CYAN + st.SPIDER_OPTION_B)
 
   display_spider_story_choices()
@@ -99,14 +102,18 @@ def display_nested_spider_choices():
   If valid, the choice is returned to this function for the program to display the 
   next block of story text depending on the chosen outcome along with some ASCII art.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.NESTED_SPIDER_OPTIONS_TEXT)
-  print(Fore.MAGENTA + st.SPIDER_OPTION_A2)
+  print(Fore.MAGENTA + Style.BRIGHT + st.SPIDER_OPTION_A2)
   print(Fore.CYAN + st.SPIDER_OPTION_B2)
 
   player_choice = get_story_choice()
+  
   if player_choice == "a":
+    ss.story_separator()
     print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
   else:
+    ss.story_separator()
     print(Fore.WHITE + st.SPIDER_OPTION_B2_TEXT)
     
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
@@ -118,6 +125,7 @@ def display_centipede_story():
   Displays options for player to choose between to direct the narrative and runs the 
   display_centipede_story_choices function for the player to make their choice.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
@@ -132,8 +140,9 @@ def display_centipede_story_choices():
   If valid, the choice is returned to this function for the program to display the 
   next block of story text depending on the chosen outcome along with some ASCII art.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.CENTIPEDE_OPTIONS_TEXT)
-  print(Fore.MAGENTA + st.CENTIPEDE_OPTION_A)
+  print(Fore.MAGENTA + Style.BRIGHT + st.CENTIPEDE_OPTION_A)
   print(Fore.CYAN + st.CENTIPEDE_OPTION_B)
 
   player_choice = get_story_choice()
@@ -141,6 +150,7 @@ def display_centipede_story_choices():
   if player_choice == "a":
     print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    ss.story_separator()
     print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
     game_over ()
   else:
@@ -155,6 +165,7 @@ def display_rake_story():
   Displays options for player to choose between to direct the narrative and runs the 
   display_spider_story_choices function for the player to make their choice.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.RAKE_STORY_TEXT)
   progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
@@ -169,8 +180,9 @@ def display_rake_story_choices():
   If valid, the choice is returned to this function for the program to display the 
   next block of story text depending on the chosen outcome along with some ASCII art.
   """
+  ss.story_separator()
   print(Fore.WHITE + st.RAKE_OPTIONS_TEXT)
-  print(Fore.MAGENTA + st.RAKE_OPTION_A)
+  print(Fore.MAGENTA + Style.BRIGHT + st.RAKE_OPTION_A)
   print(Fore.CYAN + st.RAKE_OPTION_B)
 
   player_choice = get_story_choice()
@@ -178,6 +190,7 @@ def display_rake_story_choices():
   if player_choice == "a":
     print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    ss.story_separator()
     print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
     game_over ()
   else:
@@ -195,7 +208,7 @@ def display_nested_rake_choices():
   next block of story text depending on the chosen outcome along with some ASCII art.
   """
   print(Fore.WHITE + st.NESTED_RAKE_OPTIONS_TEXT)
-  print(Fore.MAGENTA + st.RAKE_OPTION_A2)
+  print(Fore.MAGENTA + Style.BRIGHT + st.RAKE_OPTION_A2)
   print(Fore.CYAN + st.RAKE_OPTION_B2)
 
   player_choice = get_story_choice()
@@ -203,6 +216,10 @@ def display_nested_rake_choices():
     print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
     progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
     print(Fore.WHITE + st.CONGRATULATIONS_TEXT)
+    print(Fore.YELLOW + figlet_format("   Congratulations!", font = "small"))
+    print("             Y o u   E s c a p e d   T h e   G a r d e n !\n\n")
+    print(Fore.WHITE + "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
+    exit() # exits the program
   else:
     print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
     game_over()
@@ -223,18 +240,18 @@ def game_over():
     importlib.reload(title) # reloads main title ASCII Art
     main() # re-starts the game from the beginning
   else:
-    print(Fore.WHITE + "               T h a n k   y o u   f o r   p l a y i n g !\n\n")
+    print(Fore.WHITE + "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
     exit() # exits the program
 
 
-def get_restart_choice():
+def get_restart_choice(player_name):
   """
   Function to get choice input from user.
   Run a while loop to collect a valid entry of y or n from the user 
   via the terminal. The loop will repeatedly request data, until it is valid.
   """
   while True:
-    print(Fore.WHITE + " Better luck next time!\n Would you like to start again?\n")
+    print(Fore.WHITE + f" Better luck next time {player_name}!\n\n Would you like to start again?\n")
     restart_choice = input(Fore.YELLOW + " Enter y or n: \n").lower()
     if validate_restart_choice(restart_choice): #restart_choice is the data that we want to check
       break # if the choice is valid (True) the break command stops the while loop
@@ -258,8 +275,8 @@ def validate_restart_choice(value):
 
 
 def main():
-  player = get_player_name()
-  start_adventure()
+  player_name = get_player_name()
+  start_adventure(player_name)
   display_spider_story()
   display_centipede_story()
   display_rake_story()
