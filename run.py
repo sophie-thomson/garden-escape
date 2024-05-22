@@ -2,6 +2,7 @@ from pyfiglet import figlet_format
 from colorama import Fore, Style
 import story_text as st
 import story_separator as ss
+import progress_prompt as pp
 import importlib
 import spider as sp
 import title as title
@@ -36,7 +37,7 @@ def validate_player_name(name):
         length = len(name)
         if length < 1 or length > 16:  # checks length of name
             raise ValueError(Fore.RED +
-                  f"Name must be 1-16 characters. You entered {length}.")
+                  f"Name must be 1-16 characters. You entered {length}")
     except ValueError as e:
         print(Fore.RED + f"Invalid data: {e}, please try again.\n")
 
@@ -53,8 +54,7 @@ def start_adventure(player_name):
     print(Fore.CYAN + " You'll need your wits about you to make it out alive!")
     print(Fore.WHITE + st.INTRO_TEXT)
     # no input validation required. Only hitting enter will continue program
-    start_prompt = input(
-        Fore.YELLOW +
+    input(Fore.YELLOW +
         f" Are you ready {player_name}? Press enter to continue... \n")
 
 
@@ -120,12 +120,12 @@ def display_spider_story_choices():
     if player_choice == "a":
         sp.spider_ascii()  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()  # adds prompt input to press enter to continue
         display_nested_spider_choices()
     else:
         sp.spider_ascii()  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
 
 
 def display_nested_spider_choices():
@@ -151,7 +151,7 @@ def display_nested_spider_choices():
         ss.story_separator()
         print(Fore.WHITE + st.SPIDER_OPTION_B2_TEXT)
 
-    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    pp.progress_prompt()
 
 
 def display_centipede_story():
@@ -163,7 +163,7 @@ def display_centipede_story():
     """
     ss.story_separator()
     print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
-    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    pp.progress_prompt()
 
     display_centipede_story_choices()
 
@@ -186,14 +186,13 @@ def display_centipede_story_choices():
     import centipede  # displays centipede ASCII Art
     if player_choice == "a":
         print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
         ss.story_separator()
         print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
         game_over()
     else:
         print(Fore.WHITE + st.CENTIPEDE_OPTION_B_TEXT)
-
-    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
 
 
 def display_rake_story():
@@ -205,7 +204,7 @@ def display_rake_story():
     """
     ss.story_separator()
     print(Fore.WHITE + st.RAKE_STORY_TEXT)
-    progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+    pp.progress_prompt()
 
     display_rake_story_choices()
 
@@ -228,13 +227,13 @@ def display_rake_story_choices():
     import rake  # displays centipede ASCII Art
     if player_choice == "a":
         print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
         ss.story_separator()
         print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
         game_over()
     else:
         print(Fore.WHITE + st.RAKE_OPTION_B_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
         display_nested_rake_choices()
 
 
@@ -254,7 +253,7 @@ def display_nested_rake_choices():
     player_choice = get_story_choice()
     if player_choice == "a":
         print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
-        progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
+        pp.progress_prompt()
         print(Fore.WHITE + st.END_TEXT)
     else:
         print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)

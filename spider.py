@@ -1,4 +1,4 @@
-from colorama import Fore, Back, Style
+from colorama import Fore
 
 
 def spider_ascii():
@@ -19,4 +19,4 @@ def spider_ascii():
           )( \ | / (   (     )  )   \)   ) / \ | / ) (  )  )
          /  \ \|/   )   \   /  /     \  / / \ \|/ /   )(  /""")
     print(Fore.GREEN + r"""
-       |||||||||||||||||||||||||||||||||||||||||||||||||||||||||""")
+       ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||""")
