@@ -1,11 +1,11 @@
 from pyfiglet import figlet_format
 from colorama import Fore, Style
-print(Fore.RED +
+print(Fore.RED + Style.BRIGHT +
       figlet_format("    G A R D E N\n    E S C A P E", font="slant"))
 print(Fore.WHITE +
       "           H o n e y   I   S h r u n k   T h e   C o d e r !")
 
-print(Fore.YELLOW + r"""
+print(Fore.YELLOW + Style.NORMAL + r"""
    d*b                                         *(*)*
    d*b         )*(                            **(*)**
    d*b        (***)                            *(*)*""")
