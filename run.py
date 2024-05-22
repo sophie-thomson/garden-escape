@@ -425,11 +425,11 @@ def main():
     display_spider_story()
     display_centipede_story()
     display_rake_story()
-    print(Fore.YELLOW + Style.BRIGHT + figlet_format(
+    print(Fore.YELLOW + figlet_format(
         f"   Congratulations\n    {player_name}!", font="small"))
     print(Fore.CYAN +
           "             Y o u   E s c a p e d   T h e   G a r d e n !\n")
-    print(Fore.WHITE + Style.NORMAL +
+    print(Fore.WHITE +
           "               T h a n k   Y o u   F o r   P l a y i n g\n")
     exit()  # exits the program
 
