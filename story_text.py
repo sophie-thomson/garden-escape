@@ -146,8 +146,8 @@ CENTIPEDE_GAME_OVER_TEXT = """
 """
 
 CENTIPEDE_OPTION_B_TEXT = """
- You look around frantically for some kind of weapon. Remembering your 
- laptop, you open it up, turn the screen up to blinding, and thrust it 
+ You look around frantically for some kind of weapon. Remembering your
+ laptop, you open it up, turn the screen up to blinding, and thrust it
  towards the centipede's head, shouting at the top of your voice.
 
  Startled by the sudden movements, noise and bright light, the centipede

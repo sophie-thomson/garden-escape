@@ -7,4 +7,3 @@ def progress_prompt():
     to continue the story.
     """
     input(Fore.YELLOW + " Press enter to continue... \n")
-    
