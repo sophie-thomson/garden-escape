@@ -7,7 +7,7 @@ def story_separator():
     spacing for better user experience.
     """
     print(Fore.RED + "          (*)                 (*)            \
-    (*)     (*)         (*)")
+    (*)")
     print(Fore.GREEN + r"""           |                   |                  |
    |       |          |        |   |        |     |      ||           |  |
    |       |  |      ||      | |   |      | ||    |      |||     |    || |
