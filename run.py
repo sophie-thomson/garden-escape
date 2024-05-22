@@ -28,7 +28,7 @@ def get_player_name():
         player = user_name.capitalize()  # capitalises name entered by player
         if validate_player_name(player):  # player is the data to check
             break  # if the name is valid, break command stops the while loop
-    os.system("clear")  # clears screen to display text at top of window    
+    os.system("clear")  # clears screen to display text at top of window
     print(Fore.YELLOW + f"\n Good luck {player}!\n")
 
     return player
@@ -359,7 +359,7 @@ P l a y i n g !\n\n\n")
         print("This choose-your-own adventure story was designed by Sophie \
 Thomson:\n")
         print(Fore.CYAN +
-        "https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+              "https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
         exit()  # exits the program
 
 
