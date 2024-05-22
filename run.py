@@ -1,5 +1,5 @@
 from pyfiglet import figlet_format
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 import story_text as st
 import story_separator as ss
 import importlib
