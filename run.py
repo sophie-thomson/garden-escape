@@ -138,7 +138,7 @@ def display_spider_story():
     (for the player to select and see the outcome of their choice.)
     """
     ss.story_separator()  # runs story_separator to demarcate narrative blocks
-    print(Fore.WHITE + st.SPIDER_TEXT)
+    print(Fore.WHITE + st.SPIDER_STORY_TEXT)
     print(" Do you:\n")
     print(Fore.MAGENTA + Style.BRIGHT + st.SPIDER_OPTION_A)
     print(Fore.CYAN + st.SPIDER_OPTION_B)
@@ -327,14 +327,15 @@ def game_over():
     Choosing to finish the game includes an exit() function to stop the program
     from continuing to run the next block of code in main().
     """
-    print(Fore.RED + figlet_format("G A M E  O V E R", font="slant"))
+    print(Fore.RED + Style.BRIGHT + figlet_format(
+        "G A M E  O V E R", font="slant"))
     player_restart_choice = get_restart_choice()
 
     if player_restart_choice == "y":
         importlib.reload(title)  # reloads main title ASCII Art
         main()  # re-starts the game from the beginning
     else:
-        print(Fore.WHITE +
+        print(Fore.WHITE + Style.NORMAL +
               "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
         exit()  # exits the program
 
@@ -353,7 +354,7 @@ def get_restart_choice():
         str: Choice of y or n entered by the player
     """
     while True:
-        print(Fore.WHITE + " Better luck next time!\n\n")
+        print(Fore.WHITE + Style.NORMAL + " Better luck next time!\n\n")
         print(" Would you like to start again?\n")
         restart_choice = input(Fore.YELLOW + " Enter y or n: \n").lower()
         if validate_restart_choice(restart_choice):  # restart_choice to check
@@ -395,12 +396,12 @@ def main():
     display_spider_story()
     display_centipede_story()
     display_rake_story()
-    print(Fore.YELLOW + figlet_format(
+    print(Fore.YELLOW + Style.BRIGHT + figlet_format(
         f"   Congratulations\n    {player_name}!", font="small"))
     print(Fore.CYAN +
           "             Y o u   E s c a p e d   T h e   G a r d e n !\n")
-    print(Fore.WHITE +
-          "               T h a n k   Y o u   F o r   P l a y i n g !\n")
+    print(Fore.WHITE + Style.NORMAL +
+          "               T h a n k   Y o u   F o r   P l a y i n g\n")
     exit()  # exits the program
 
 

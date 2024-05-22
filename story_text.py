@@ -29,12 +29,15 @@ INTRO_TEXT = """
  to your house to see if you can find a way to revert to your last save before
  the corrupted email arrived."""
 
-SPIDER_TEXT = """
+SPIDER_STORY_TEXT = """
+ CHAPTER ONE:
+
  Determined to make it home and return to your normal size, you take a deep
  breath and cautiously make your way through the 20ft tall grass.
 
- As you climb between some dandelions, you spot a massive spider hanging on
- a thread, swaying gently in the shadows above your head.
+ As you climb between some dandelions, muttering and cursing to yourself,
+ you spot a massive spider hanging on a thread, swaying gently in the
+ shadows above your head.
 """
 
 SPIDER_OPTION_A = " a) Try to sneak past the spider, \
@@ -98,6 +101,8 @@ SPIDER_OPTION_B2_TEXT = """
  """
 
 CENTIPEDE_STORY_TEXT = """
+ CHAPTER TWO:
+
  Having made it past the spider, you feel pretty good about your progress, but
  you are getting hungry. You think dreamily of your stash of trail mix and
  chocolate buttons that keep you going through those long hours of debugging.
@@ -149,6 +154,8 @@ CENTIPEDE_OPTION_B_TEXT = """
 """
 
 RAKE_STORY_TEXT = """
+CHAPTER THREE:
+
  You push onwards towards the huge silhouette of your house, but you are
  exhausted and starving and the sun is getting lower in the sky. You shudder
  to think what it would be like to be stuck out here at night!
@@ -204,10 +211,10 @@ NESTED_RAKE_OPTIONS_TEXT = """
 """
 
 RAKE_OPTION_A2 = " a) Open up your laptop and hold it above your head hoping \
-it will work as a glider.\n"
+it will work\n as a glider.\n"
 
 RAKE_OPTION_B2 = " b) Tuck your knees up to your chest ready to perform a \
-stunt roll onto the kitchen floor.\n"
+stunt roll onto\n the kitchen floor.\n"
 
 RAKE_OPTION_A2_TEXT = """
  Amazingly your trusty laptop catches the breeze and lifts you higher into the
