@@ -2,6 +2,7 @@ from pyfiglet import figlet_format
 from colorama import Fore, Style
 import story_text as st
 import story_separator as ss
+import game_over_separator as gos
 import progress_prompt as pp
 import importlib
 import spider as sp
@@ -245,6 +246,7 @@ def display_centipede_story_choices():
         print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
         os.system("clear")  # clears screen to display text at top of window
+        gos.game_over_separator()
         print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
         game_over()
     else:
@@ -294,6 +296,7 @@ def display_rake_story_choices():
         print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
         os.system("clear")  # clears screen to display text at top of window
+        gos.game_over_separator()
         print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
         game_over()
     else:
@@ -322,11 +325,13 @@ def display_nested_rake_choices():
     print(Fore.CYAN + st.RAKE_OPTION_B2)
 
     player_choice = get_story_choice()
+    os.system("clear")  # clears screen to display text at top of window
     if player_choice == "a":
         print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
         print(Fore.WHITE + st.END_TEXT)
     else:
+        gos.game_over_separator()
         print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
         game_over()
 
@@ -347,8 +352,14 @@ def game_over():
         importlib.reload(title)  # reloads main title ASCII Art
         main()  # re-starts the game from the beginning
     else:
+        os.system("clear")  # clears screen to display text at top of window
         print(Fore.WHITE + Style.NORMAL +
-              "               T h a n k   Y o u   F o r   P l a y i n g !\n\n")
+              "\n\n\n               T h a n k   Y o u   F o r   \
+P l a y i n g !\n\n\n")
+        print("This choose-your-own adventure story was designed by Sophie \
+Thomson:\n")
+        print(Fore.CYAN +
+        "https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
         exit()  # exits the program
 
 
