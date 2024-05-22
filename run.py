@@ -344,7 +344,7 @@ def game_over():
     Choosing to finish the game includes an exit() function to stop the program
     from continuing to run the next block of code in main().
     """
-    print(Fore.RED + Style.BRIGHT + figlet_format(
+    print(Fore.RED + figlet_format(
         "G A M E  O V E R", font="slant"))
     player_restart_choice = get_restart_choice()
 
@@ -353,7 +353,7 @@ def game_over():
         main()  # re-starts the game from the beginning
     else:
         os.system("clear")  # clears screen to display text at top of window
-        print(Fore.WHITE + Style.NORMAL +
+        print(Fore.WHITE +
               "\n\n\n               T h a n k   Y o u   F o r   \
 P l a y i n g !\n\n\n")
         print("This choose-your-own adventure story was designed by Sophie \
@@ -377,7 +377,7 @@ def get_restart_choice():
         str: Choice of y or n entered by the player
     """
     while True:
-        print(Fore.WHITE + Style.NORMAL + " Better luck next time!\n\n")
+        print(Fore.WHITE + " Better luck next time!\n\n")
         print(" Would you like to start again?\n")
         restart_choice = input(Fore.YELLOW + " Enter y or n: \n").lower()
         if validate_restart_choice(restart_choice):  # restart_choice to check
