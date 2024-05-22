@@ -1,8 +1,11 @@
-from colorama import Fore, Back, Style
+from colorama import Fore
+
+
 def story_separator():
-  print(Fore.RED + r"          (*)                 (*)                (*)     (*)         (*)")
-  print(Fore.GREEN + r"""           |                   |                  |       |           |
+    print(Fore.RED + "          (*)                 (*)            \
+    (*)     (*)         (*)")
+    print(Fore.GREEN + r"""           |                   |                  |
    |       |          |        |   |        |     |      ||           |  |
-   |       |  |      ||      | |   |      | ||    |      |||     |    || | 
+   |       |  |      ||      | |   |      | ||    |      |||     |    || |
   |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    """)
+  """)
