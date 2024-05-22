@@ -28,7 +28,7 @@ def get_player_name():
         player = user_name.capitalize()  # capitalises name entered by player
         if validate_player_name(player):  # player is the data to check
             break  # if the name is valid, break command stops the while loop
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     print(Fore.YELLOW + f"\n Good luck {player}!\n")
 
     return player
@@ -140,7 +140,7 @@ def display_spider_story():
     narrative of the story and runs the display_spider_story_choices function
     (for the player to select and see the outcome of their choice.)
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()  # runs story_separator to demarcate narrative blocks
     print(Fore.WHITE + st.SPIDER_STORY_TEXT)
     print(" Do you:\n")
@@ -160,7 +160,7 @@ def display_spider_story_choices():
     file depending on the player's choice of a or b.
     """
     player_choice = get_story_choice()
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     if player_choice == "a":
         sp.spider_ascii()  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
@@ -186,14 +186,14 @@ def display_nested_spider_choices():
     statement displays the relevant block of narrative from the story_text
     file depending on the player's choice of a or b.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()
     print(Fore.WHITE + st.NESTED_SPIDER_OPTIONS_TEXT)
     print(Fore.MAGENTA + Style.BRIGHT + st.SPIDER_OPTION_A2)
     print(Fore.CYAN + st.SPIDER_OPTION_B2)
 
     player_choice = get_story_choice()
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     if player_choice == "a":
         ss.story_separator()
         print(Fore.WHITE + st.SPIDER_OPTION_A2_TEXT)
@@ -212,7 +212,7 @@ def display_centipede_story():
     Runs the display_centipede_story_choices function for the player to
     view the centipede story choice options.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()
     print(Fore.WHITE + st.CENTIPEDE_STORY_TEXT)
     pp.progress_prompt()  # adds prompt input to press enter to continue
@@ -233,19 +233,19 @@ def display_centipede_story_choices():
     file or runs the game_over() function depending on the player's choice
     of a or b.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()
     print(Fore.WHITE + st.CENTIPEDE_OPTIONS_TEXT)
     print(Fore.MAGENTA + Style.BRIGHT + st.CENTIPEDE_OPTION_A)
     print(Fore.CYAN + st.CENTIPEDE_OPTION_B)
 
     player_choice = get_story_choice()
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     import centipede  # displays centipede ASCII Art
     if player_choice == "a":  # checks if player_choice is 'a'
         print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
-        os.system("clear")  # clears screen to display text at top of window
+        os.system("clear")  # clears screen
         gos.game_over_separator()
         print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
         game_over()
@@ -262,7 +262,7 @@ def display_rake_story():
     Runs the display_rake_story_choices function for the player to view the
     rake story choice options.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()
     print(Fore.WHITE + st.RAKE_STORY_TEXT)
     pp.progress_prompt()  # adds prompt input to press enter to continue
@@ -283,19 +283,19 @@ def display_rake_story_choices():
     file or runs the game_over() function depending on the player's choice
     of a or b.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     ss.story_separator()
     print(Fore.WHITE + st.RAKE_OPTIONS_TEXT)
     print(Fore.MAGENTA + Style.BRIGHT + st.RAKE_OPTION_A)
     print(Fore.CYAN + st.RAKE_OPTION_B)
 
     player_choice = get_story_choice()
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     import rake  # displays centipede ASCII Art
     if player_choice == "a":
         print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
-        os.system("clear")  # clears screen to display text at top of window
+        os.system("clear")  # clears screen
         gos.game_over_separator()
         print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
         game_over()
@@ -319,16 +319,19 @@ def display_nested_rake_choices():
     statement displays the relevant block of narrative from the story_text
     file depending on the player's choice of a or b.
     """
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
+    ss.story_separator()
     print(Fore.WHITE + st.NESTED_RAKE_OPTIONS_TEXT)
     print(Fore.MAGENTA + Style.BRIGHT + st.RAKE_OPTION_A2)
     print(Fore.CYAN + st.RAKE_OPTION_B2)
 
     player_choice = get_story_choice()
-    os.system("clear")  # clears screen to display text at top of window
+    os.system("clear")  # clears screen
     if player_choice == "a":
+        ss.story_separator()
         print(Fore.WHITE + st.RAKE_OPTION_A2_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
+        os.system("clear")  # clears screen
         print(Fore.WHITE + st.END_TEXT)
     else:
         gos.game_over_separator()
@@ -349,17 +352,18 @@ def game_over():
     player_restart_choice = get_restart_choice()
 
     if player_restart_choice == "y":
+        os.system("clear")  # clears screen
         importlib.reload(title)  # reloads main title ASCII Art
         main()  # re-starts the game from the beginning
     else:
-        os.system("clear")  # clears screen to display text at top of window
+        os.system("clear")  # clears screen
         print(Fore.WHITE +
               "\n\n\n               T h a n k   Y o u   F o r   \
 P l a y i n g !\n\n\n")
-        print("This choose-your-own adventure story was designed by Sophie \
+        print("  This choose-your-own adventure story was designed by Sophie \
 Thomson:\n")
         print(Fore.CYAN +
-              "https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+              "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
         exit()  # exits the program
 
 

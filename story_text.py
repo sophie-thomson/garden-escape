@@ -156,7 +156,7 @@ CENTIPEDE_OPTION_B_TEXT = """
 """
 
 RAKE_STORY_TEXT = """
-CHAPTER THREE:
+ CHAPTER THREE:
 
  You push onwards towards the huge silhouette of your house, but you are
  exhausted and starving and the sun is getting lower in the sky. You shudder
@@ -193,9 +193,9 @@ RAKE_OPTION_A_TEXT = """
  shadow. If you can keep going, you might just do it!
 """
 RAKE_GAME_OVER_TEXT = """
- Just when you think you're safe, you hear a flurry of feathers and only
- have time to register the light reflecting on the huge sharp beak before
- you are snatched up and swallowed whole.
+ Just when you think you're safe, you hear a flurry of feathers and barely
+ register the light reflecting on the huge sharp beak before you are snatched
+ up and swallowed whole.
 """
 
 RAKE_OPTION_B_TEXT = """
@@ -231,7 +231,7 @@ RAKE_OPTION_A2_TEXT = """
  back to your last backup before the email.
 """
 
-RAKE_OPTION_B2_TEXT = """"
+RAKE_OPTION_B2_TEXT = """
  Well your stunt training might have worked if not for a passing Magpie!
 
  You hear a flurry of feathers, but before you can look round a sharp beak
