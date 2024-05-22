@@ -1,18 +1,20 @@
-from colorama import Fore, Back, Style
+from colorama import Fore
+
 print(Fore.RED + r"""
-                                                                                                  
-                                                          |
-                          ,,                              |__________________
-                         (@@)                             |
-                         [""]                             |                   """)
-print(Fore.YELLOW + r"""                     {}_/-[]-\_{}                         |__________________
-                      _/-[]-\_                            |                   
-                      _/-[]-\_                            |        
-                      _/-[]-\_                            |__________________
-                     _/-[]-\_              {}             |       
-                    _/-[]-\_            _/-[]-\_          \             
-                     _/-[]-\         _/-[]-\_              \                  
-                       _/-[][][][][][][]-\_                 \        
-                           \_ \_ \_ \_ \_                    \_______________""")       
-print(Fore.GREEN + r"MMMMmmmmmmmmMMMMMmmMMmMmMMMMMmmmMMMmMmmmMMMMmmmmMMmMMMMMMmMMMMMMMMmMMMMMmmmMM")
-print("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
+                                                   |___________
+                        ,,                         |
+                       (@@)                        |
+                       [""]                        |___________""")
+print(Fore.YELLOW + r"""                   {}_/-[]-\_{}                    |
+                     _/-[]-\_                      |
+                     _/-[]-\_                      |___________
+                     _/-[]-\_                      |
+                     _/-[]-\_              {}      |
+                    _/-[]-\_            _/-[]-\_    \__________
+                     _/-[]-\         _/-[]-\_        \
+                       _/-[][][][][][][]-\_           \
+                           \_ \_ \_ \_ \_              \_______""")
+print(Fore.GREEN + "MMMMmmmmmmmmMMMMMmmMMmMmMMMMMmmmMMMmM\
+mmmMMMMmmmmMMmMMMMMMmMMMMM")
+print("||||||||||||||||||||||||||||||||||||||||||||||||||\
+|||||||||||||")
