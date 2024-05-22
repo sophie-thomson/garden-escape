@@ -3,6 +3,7 @@ from colorama import Fore, Back, Style
 import story_text as st
 import story_separator as ss
 import importlib
+import spider as sp
 import title as title
 
 
@@ -33,7 +34,7 @@ def validate_player_name(name):
     """
     try:
         length = len(name)
-        if length < 1 or length > 16:
+        if length < 1 or length > 16:  # checks length of name
             raise ValueError(Fore.RED +
                   f"Name must be 1-16 characters. You entered {length}.")
     except ValueError as e:
@@ -97,7 +98,7 @@ def display_spider_story():
     narrative and runs the display_spider_story_choices function for the player
     to make their choice.
     """
-    ss.story_separator()
+    ss.story_separator()  # runs story_separator to demarcate narrative blocks
     print(Fore.WHITE + st.SPIDER_TEXT)
     print(" Do you:\n")
     print(Fore.MAGENTA + Style.BRIGHT + st.SPIDER_OPTION_A)
@@ -117,14 +118,12 @@ def display_spider_story_choices():
     """
     player_choice = get_story_choice()
     if player_choice == "a":
-        print(f"player choice is {player_choice}")
-        import spider  # displays spider ASCII Art
+        sp.spider_ascii()  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
         progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
         display_nested_spider_choices()
     else:
-        import spider  # displays spider ASCII Art
-        print(f"player choice is {player_choice}")
+        sp.spider_ascii()  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
         progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
