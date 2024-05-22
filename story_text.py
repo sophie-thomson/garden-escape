@@ -171,10 +171,10 @@ RAKE_OPTIONS_TEXT = """
 """
 
 RAKE_OPTION_A = " a) Run back the way you came, losing ground but hopefully \
-avoiding the path of the falling rake.\n"
+avoiding the path of\n the falling rake.\n"
 
 RAKE_OPTION_B = " b) Watch the rake fall, trying to judge its trajectory \
-before choosing which direction to jump in.\n"
+before choosing which\n direction to jump in.\n"
 
 RAKE_OPTION_A_TEXT = """
  You race through the grass away from the house, watching the shadow of the
