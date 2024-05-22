@@ -49,13 +49,15 @@ SPIDER_OPTION_A_TEXT = """
  You carefully manoeuver around the spider, hoping to avoid its notice.
  However, your movement disturbs a nearby web strand, alerting the arachnid to
  your presence. The spider fixes all 8 of its beady eyes on you and steadily
- starts to descend..."""
+ starts to descend...
+ """
 
 SPIDER_OPTION_B_TEXT = """
  Remembering that you have your laptop with you, you use your coding skills to
  hack into a nearby smart sprinkler, causing water to spray everywhere. You
  are now soaking wet, but while the spider is distracted, you run for it and
- escape into the undergrowth. """
+ escape into the undergrowth.
+ """
 
 NESTED_SPIDER_OPTIONS_TEXT = """
  You watch, transfixed in horror, as the spider drops towards you. It seems to
@@ -65,7 +67,7 @@ NESTED_SPIDER_OPTIONS_TEXT = """
  You wish you had time to whip out your laptop and ask StackOverflow what to
  do, but you need to act fast.
 
- Do you:\n
+ Do you:
  """
 
 SPIDER_OPTION_A2 = " a) Quickly roll out of the way.\n"
