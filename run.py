@@ -69,7 +69,7 @@ def get_story_choice():
         if validate_story_choice(story_choice):  # story_choice data to check
             break  # if the choice is valid, break command stops the while loop
 
-        return story_choice
+    return story_choice
 
 
 def validate_story_choice(value):
@@ -117,12 +117,14 @@ def display_spider_story_choices():
     """
     player_choice = get_story_choice()
     if player_choice == "a":
+        print(f"player choice is {player_choice}")
         import spider  # displays spider ASCII Art
         print(Fore.WHITE + st.SPIDER_OPTION_A_TEXT)
         progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
         display_nested_spider_choices()
     else:
         import spider  # displays spider ASCII Art
+        print(f"player choice is {player_choice}")
         print(Fore.WHITE + st.SPIDER_OPTION_B_TEXT)
         progress_prompt = input(Fore.YELLOW + " Press enter to continue... \n")
 
