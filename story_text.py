@@ -146,10 +146,9 @@ CENTIPEDE_GAME_OVER_TEXT = """
 """
 
 CENTIPEDE_OPTION_B_TEXT = """
- You look around frantically for something you can use as a weapon against
- the centipede. Remembering your laptop, you open it up and turn the screen
- brightness up to blinding, thrusting it towards the centipede's head and
- shouting at the top of your voice.
+ You look around frantically for some kind of weapon. Remembering your 
+ laptop, you open it up, turn the screen up to blinding, and thrust it 
+ towards the centipede's head, shouting at the top of your voice.
 
  Startled by the sudden movements, noise and bright light, the centipede
  slinks away, allowing you to pass.
@@ -160,7 +159,7 @@ RAKE_STORY_TEXT = """
 
  You push onwards towards the huge silhouette of your house, but you are
  exhausted and starving and the sun is getting lower in the sky. You shudder
- to think what it would be like to be stuck out here at night!
+ to think what it will be like out here at night!
 
  As you get closer to the back of your house, you start to think you might
  actually make it through this nightmare if you can just figure out how on

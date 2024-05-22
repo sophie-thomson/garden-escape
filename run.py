@@ -6,6 +6,7 @@ import game_over_separator as gos
 import progress_prompt as pp
 import importlib
 import spider as sp
+import centipede as cen
 import title as title
 import os
 
@@ -241,7 +242,7 @@ def display_centipede_story_choices():
 
     player_choice = get_story_choice()
     os.system("clear")  # clears screen
-    import centipede  # displays centipede ASCII Art
+    cen.centipede_ascii()  # displays centipede ASCII Art
     if player_choice == "a":  # checks if player_choice is 'a'
         print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
