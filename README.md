@@ -47,8 +47,6 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ### Introduction
 
-![Screenshot of Introduction with Good Luck message and Start Game input](docs/readme-images/intro.png)
-
 ***Good Luck Message***
 
 - An f-string at the top of the intro page displays the message "Good Luck {player}!" which inserts the name entered by the user in place of the {player} placeholder. 
@@ -64,6 +62,8 @@ If you get stuck or wish to run through the story to reach the end to test the f
 - At the bottom of the window is a prompt with an f-string displaying "Are you ready {player_name}? Press enter to continue..." which inserts the name entered by the user in place of the {player_name} placeholder.
 - This reinforces the connection with the player and builds tension.
 - There is no validation for this input as it is not used in any other part of the program
+
+![Screenshot of Introduction with Good Luck message and Start Game input](docs/readme-images/intro.png)
 
 
 ### CHAPTER ONE - Spider Story
@@ -120,6 +120,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ![Screenshot of Centipede ascii art with result of story choice](docs/readme-images/centipede-ascii.png)
 
+
 ### Chapter Three - Rake Story
 
 ***Rake Story Text***
@@ -151,6 +152,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ![Screenshot of Nested Rake Options](docs/readme-images/nested-rake-options.png)
 
+
 ### Story Choice: input()
 
 - Each time the player is presented with a choice of two options a or b in the narrative text, the get_story_choice() function prompts the player to make a selection from the two options and enter a or b.
@@ -160,12 +162,13 @@ If you get stuck or wish to run through the story to reach the end to test the f
 ![Screenshot of Story Choice input with error messages](docs/readme-images/story-choice-error.png)
 ![Screenshot of Story Choice input with error messages](docs/readme-images/centipede-choices-errors.png)
 
+
 ### Game Over
 
 ***Game Over Text***
 
-- At several stages of the game, the player may choose an option that results in the game over for the player.
-- The game_over() function displays the game_over_separator (a red version of the usual story_separator ascii art), along with the relevant game over narrative text and large text stating GAME OVER.
+- At several stages of the game, the player may choose an option that results in game over for the player.
+- The game_over() function displays a red version of the story_separator art, along with the relevant game over narrative text and large text stating GAME OVER.
 - The GAME OVER text is generated using [pyfiglet](https://pypi.org/project/pyfiglet/) in 'slant' font and red colour to echo the text that is used in the title text and reinforce the message that the player's character has died.
 - This function runs the get_restart_choice() function to ask the player if they would like to start from the beginning again or end the game. 
 
@@ -186,6 +189,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ![Screenshot of End Credits](docs/readme-images/end-credits.png)
 
+
 ### Game Completion
 
 ***Congratulations Text***
@@ -196,12 +200,14 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ![Screenshot of Congratulations Screen](docs/readme-images/congratulations.png)
 
+
 ### Existing Features
 
-- Not all aspects of CRUD functionality (Create, Read, Update, Delete) apply to this program as there is no requirement to read data from a database and update it, however the principle of reading different variables of text data from the story_text.py file to be imported into the game structure is evident throughout the program.
 - Robust Error Handling functions validate all player inputs where the input value is to be used in another part of the program and raise clear error messages to be displayed to the player if validation fails.
 - This program is deployed and run on Heroku using a specially designed CI Python template. 
 - All content written and presented to fit terminal window of 80 characters wide x 24 lines high.
+- Elements of CRUD functionality (Create, Read, Update, Delete) are evident in the reading of different variables of text data from the story_text.py file which are imported into the code throughout the code.
+
 
 ### Future Features
 
@@ -211,6 +217,7 @@ To expand on this project, there are a number of features that could be added to
 - A progress bar could be added to let the player know how far through the game they got before they died.
 - A feedback page could be linked from the terminal to ask players for their reviews of the game and any suggestions for improvement. 
  
+
 ## Design
 
 ### Planning Process
@@ -297,6 +304,7 @@ The functions created for this program are listed below. A detailed description 
 ![Screenshot of story_separator ASCII Art](docs/readme-images/story-separator.png)
 ![Screenshot of game_over separator ASCII Art](docs/readme-images/game-over-separator.png)
 
+
 ### Layout and Styling
 
 - All content written and presented to fit on window of 80 characters wide x 24 lines high.
@@ -307,6 +315,7 @@ The functions created for this program are listed below. A detailed description 
     - Red: Used to highlight important information such as error messages and main titles
 - Story separator
 - Game over separator
+
 
 ## Testing
 
@@ -352,15 +361,14 @@ The functions created for this program are listed below. A detailed description 
 - Python
     -  No errors were found when passing through the Pep8 Validator [CI Python Linter](https://pep8ci.herokuapp.com/)
 
-![Screenshot of Python validation results for run.py]()
-![Screenshot of Python validation results for story_text.py]()
-![Screenshot of Python validation results for centipede.py]()
-![Screenshot of Python validation results for game_over_separator.py]()
-![Screenshot of Python validation results for progress_prompt.py]()
-![Screenshot of Python validation results for rake.py]()
-![Screenshot of Python validation results for spider.py]()
-![Screenshot of Python validation results for story_separator.py]()
-![Screenshot of Python validation results for title.py]()
+![Screenshot of Python validation results for run.py](docs/readme-images/linter-run.png)
+![Screenshot of Python validation results for story_text.py](docs/readme-images/linter-story-text.png)
+![Screenshot of Python validation results for centipede.py](docs/readme-images/linter-centipede.png)
+![Screenshot of Python validation results for progress_prompt.py](docs/readme-images/linter-progress-prompt.png)
+![Screenshot of Python validation results for rake.py](docs/readme-images/linter-rake.png)
+![Screenshot of Python validation results for spider.py](docs/readme-images/linter-spider.png)
+![Screenshot of Python validation results for story_separator.py](docs/readme-images/linter-story-separator.png)
+![Screenshot of Python validation results for title.py](docs/readme-images/linter-title.png)
 
 - GitPod Problems
     - No problems detected within the Gitpod Garden-Escape workspace
