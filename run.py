@@ -1,15 +1,17 @@
 from pyfiglet import figlet_format
 from colorama import Fore, Style
+import importlib
+import os
+import webbrowser
 import story_text as st
 import story_separator as ss
 import game_over_separator as gos
 import progress_prompt as pp
-import importlib
 import spider as sp
 import centipede as cen
 import rake as rk
 import title as title
-import os
+
 
 
 def get_player_name():
@@ -365,8 +367,8 @@ def game_over():
 P l a y i n g !\n\n\n")
         print("  This choose-your-own adventure story was designed by Sophie \
 Thomson:\n")
-        print(Fore.CYAN +
-              "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+        print(Fore.CYAN + webbrowser.open
+              ("https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n"))
         exit()  # exits the program
 
 

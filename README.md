@@ -27,7 +27,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 - 'Garden Escape' displayed in large text to provide clear heading to mark the beginning of the story and to give an impression of a big adventure ahead. 
 - Colour red used to indicate danger and risk
 - 'Honey I Shrunk the Coder!' in default font, but with spacing between letters to stand out from regular text and appear larger to work visually alongside main title text.
-- 'Garden Escape' text created using [pyfiglet 1.0.2](https://pypi.org/project/pyfiglet/) library imported from Python Package Index (PyPI) with ['slant'](http://www.figlet.org/examples.html) font. 
+- 'Garden Escape' text generated using [pyfiglet 1.0.2](https://pypi.org/project/pyfiglet/) library imported from Python Package Index (PyPI) with ['slant'](http://www.figlet.org/examples.html) font. 
 - Red colour text output created using [Colorama 0.4.6](https://pypi.org/project/colorama/) library imported from PyPI.
 
 ***ASCII Art***
@@ -165,33 +165,36 @@ If you get stuck or wish to run through the story to reach the end to test the f
 ***Game Over Text***
 
 - At several stages of the game, the player may choose an option that results in the game over for the player.
-- The game_over() function 
+- The game_over() function displays the game_over_separator (a red version of the usual story_separator ascii art), along with the relevant game over narrative text and large text stating GAME OVER.
+- The GAME OVER text is generated using [pyfiglet](https://pypi.org/project/pyfiglet/) in 'slant' font and red colour to echo the text that is used in the title text and reinforce the message that the player's character has died.
+- This function runs the get_restart_choice() function to ask the player if they would like to start from the beginning again or end the game. 
 
 ![Screenshot of Game Over Screen](docs/readme-images/game-over-rake.png)
 
 ***Restart Game: input()***
 
-- 
+- The get_restart_choice() function displays the message "Would you like to start again?" and asks the player to enter y or n to indcate their answer.
+- The player input is validated through the validate_restart_choice() function to check that the player has entered 'y' or 'n'. If the value entered doesn't pass validation then an error message is displayed to the player with a prompt to try again.
+- The error message is displayed in red text to highlith that there is a problem that needs attention.
 
-![Screenshot of Player Choice input with error messages]()
+![Screenshot of Player Choice input with error messages](docs/readme-images/restart-choice-errors.png)
 
 ***End Credits***
 
-- 
+- If the player chooses not to restart the game, then the game_over() function displays the end credits and exits the programme.
+- Includes a message thanking the player for playing and including a link to the designer's LinkedIn profile.
 
-![Screenshot of End Credits]()
+![Screenshot of End Credits](docs/readme-images/end-credits.png)
 
 ### Game Completion
 
 ***Congratulations Text***
 
-- 
+- The last code to run in the main() function will only run if the player makes it all the way to the end of the game.
+- This displays the narrative variable END_TEXT to finish the story and an f-string stating "Congratulations {player_name}!" which inserts the name chosen by the player in place of the {player_name} placeholder.
+- The congratulations message is generated using [pyfiglet](https://pypi.org/project/pyfiglet/) in 'small' font and yellow colour to stand out and highlight that it is different to the other title and game over text styles.
 
-***Congratulations Text***
-
-- 
-
-![Screenshot of Congratulations Screen]()
+![Screenshot of Congratulations Screen](docs/readme-images/congratulations.png)
 
 ### Existing Features
 
