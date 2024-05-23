@@ -239,7 +239,7 @@ To expand on this project, there are a number of features that could be added to
 ***Process***
 
 - The main body of the program was built using incremental coding to tackle each step outlined in the logic diagram. 
-- Where there was repetition of the same process this was moved into a global function such as the get_story_choice() function and the validate_story_choice() function.
+- Where there was repetition of the same process in each chapter, a global function was created such as the get_story_choice() function and the validate_story_choice() function.
 - To prevent the main() function from getting too long, local level functions are called from within the associated function that requires that function to run.   
 
 ***Data Model***
@@ -252,27 +252,50 @@ To expand on this project, there are a number of features that could be added to
 
 ***List of Functions***
 
-- get name and validation
-- display story choices
-- continue choice
-- Separate py files
+The functions created for this program are listed below. A detailed description of the functionality can be found in the docstring for each function:  
+
+- main()
+- get_player_name()
+- validate_player_name()
+- start_adventure()
+- story_separator()
+- get_story_choice()
+- validate_story_choice()
+- display_spider_story()
+- display_spider_story_choices()
+- display_nested_spider_choices()
+- spider_ascii()
+- display_centipede_story()
+- display_centipede_story_choices()
+- centipede_ascii()
+- display_rake_story()
+- display_rake_story_choices()
+- display_nested_rake_choices()
+- rake_ascii()
+- game_over_separator()
+- game_over()
+- get_restart_choice()
+- validate_restart_choice()
+- progress_prompt()
 
 ***Imported Libraries***
 
-- pyfiglet
-- 
+- pyfiglet (PyPI) - used to generate ASCII text
+- Colorama (PyPI) - used to create coloured output for better readability and visual interest
+- importlib - importlib.reload() function used to reload game title if player restarts the game 
+- os - os.system("clear") function used to clear the window
+- webbrowser - used to open link to LinkedIn profile when end credits are displayed
 
 ***ASCII Art***
 
-- Designed using raw print data
-- Colorama
-- Separate py files
+- All ASCII art files were designed by Sophie Thomson using a raw string print function.
+- Different coloured outputs to add visual interest were used by importing Colorama library
+- The ASCII Art for the creature or tool in each chapter was created as a function in a separate py file so it could be called and displayed multiple times within without issue.
+- The story_separator() function was created using a strip of ASCII Art as a form of 'page break' for better demarcation between story 'pages' and improved readability
+- A red version of the story separator is used in the game_over() function to reinforce the GAME OVER message and that the player's character has died.
 
-![Screenshot of spider ASCII Art]()
-![Screenshot of centipede ASCII Art]()
-![Screenshot of rake ASCII Art]()
-![Screenshot of story_separator ASCII Art]()
-![Screenshot of game_over separator ASCII Art]()
+![Screenshot of story_separator ASCII Art](docs/readme-images/story-separator.png)
+![Screenshot of game_over separator ASCII Art](docs/readme-images/game-over-separator.png)
 
 ### Layout and Styling
 
@@ -326,7 +349,7 @@ To expand on this project, there are a number of features that could be added to
         
 ### Validator Testing
 
-- PYTHON
+- Python
     -  No errors were found when passing through the Pep8 Validator [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ![Screenshot of Python validation results for run.py]()
@@ -390,7 +413,7 @@ No code was taken from Jack's project, but it was useful for considering a suita
 - A World Class Tech Ed tutorial on [YouTube](https://www.youtube.com/watch?v=z8yw9gUJaHo) was used as a reference when creating my own ASCII art
 - Guidance on [Geeks for Geeks](https://www.geeksforgeeks.org/clear-screen-python/) was used as reference for how to clear the screen in python using os.system("clear")
 - The code in a [StackOverflow discussion](https://stackoverflow.com/questions/1254370/reimport-a-module-while-interactive) was adapted to enable the title content to be re-imported if the player chooses to re-start the game.
-- 
+- A [StackOverflow discussion](https://stackoverflow.com/questions/66134751/how-do-i-properly-print-ascii-art) was used as a reference for formatting ASCII art to print correctly.
 - 
 
 ## Code & Technology
