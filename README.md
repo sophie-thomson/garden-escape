@@ -11,7 +11,9 @@ This terminal-based project is coded in Python and is designed to view on a lapt
 
 The live site can be found here: https://garden-escape-185db543c454.herokuapp.com/
 
-![Multi-device mockup](docs/readme-images/multi-device-mockup.png)
+***CHEAT SHEET***
+
+If you get stuck or wish to run through the story to reach the end to test the functionality then the sequence of correct choices is listed at the end of this document.
 
 ## Features
 
@@ -66,30 +68,20 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ### CHAPTER ONE - Spider Story
 
-![Screenshot of Spider introduction with story options](docs/readme-images/spider-story.png)
-
-***Spider Story Text***
+***Spider Story and Options Text***
 
 - Narrative text to start the adventure and set the scene for an encounter with a giant spider.
 - The display_spider_story() function extracts the SPIDER_STORY_TEXT from story_text.py and displays it on the terminal.
-
-***Options Text***
-
 - Two options are displayed for the player to choose from. Each option will determine a different narrative direction for the next part of the story.
 - The display_spider_story() function extracts the two options (SPIDER_OPTION_A and SPIDER_OPTION_B) from story_text.py
 - The options are displayed to the player in two different colours so they stand out from the usual story text.
+- This function runs the display_spider_story_choices() function
 
-***Story Choice: input()***
-
-- Below the two options the get_story_choice() function prompts the user to make a selection from the two options and enter a or b.
-- The entered choice is passed through validation function validate_story_choice() to check that they have entered either 'a' or 'b'. If it doesn't pass validation then an error message is displayed to the player with a prompt to try again.
-- The error message is displayed in red text to highlight that there is problem that needs attention.
-
-![Screenshot of Story Choice input prompt with error messages](docs/readme-images/story-choice-error.png)
+![Screenshot of Spider introduction with story options](docs/readme-images/spider-story.png)
 
 ***Display Spider Story Choices***
 
-- The display_spider_story_choices() function uses an if/else statement to define which code to run and story text to extract from story_text.py according to the choice of a or b made by the player.
+- The display_spider_story_choices() function gets the story choice from the player and uses an if/else statement to define which code to run and story text to extract from story_text.py according to the choice of a or b made by the player.
 -  Both outcomes will run the spider_ascii() function from spider.py which displays the spider ascii art alongside the relevant narrative text for either a or b chosen by the player.
 - For both option choices, the progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 - This function allows the player to move through each 'page' of the story at their own pace and does not require any validation as the input is not used anywhere else.
@@ -101,7 +93,6 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 - One of the two options in the first spider scenario contains a further set of 'nested' options for the player to choose from to progress the story.
 - The display_nested_spider_choices() function extracts the NESTED_SPIDER_OPTIONS_TEXT from story_text.py and displays this on the terminal along with the two nested options a and b for the player to select between.
 - Options are displayed to the player in two different colours so they stand out from the usual story text.
-- Following the same process outlined above, the get_story_choice() function prompts the player to select either a or b and their choice input is validated via validate_story_choice().
 - The progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 
 ![Screenshot of Nested Spider Options](docs/readme-images/nested-spider-options.png)
@@ -109,59 +100,74 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ### CHAPTER TWO - Centipede Story
 
-***Story Text***
+***Centipede Story Text***
 
-- 
+- Narrative text to move the story forward from the spider scenario and set the scene for an encounter with an enormous centipede.
+- The display_centipede_story() function extracts the CENTIPEDE_STORY_TEXT from story_text.py and displays it on the terminal.
+- This function runs the display_centipede_story_choices() function.
 
-***Options Text***
+![Screenshot of Centipede Story Text](docs/readme-images/chapter-2-centipede.png)
+![Screenshot of Centipede narrative with options](docs/readme-images/centipede-story-options.png)
 
-- 
-- 
+***Display Centipede Story Choices***
 
-![Screenshot of Centipede Section with story options]()
-![Screenshot of ]()
+- Two options are displayed for the player to choose from. Each option determines a different narrative direction for the next part of the story.
+- The display_centipede_story_choices() function extracts the two options (CENTIPEDE_OPTION_A and CENTIPEDE_OPTION_B) from story_text.py and displays them to the player.
+- This function then runs the get_story_choice() function to ask the player to choose option a or b.
+- An if/else statement defines which code to run and which narrative text variable to extract from story_text.py according to the choice of a or b made by the player.
+-  Both outcomes run the centipede_ascii() function from centipede.py which displays the centipede ascii art alongside the relevant narrative text for either a or b chosen by the player.
+- For both option choices, the progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 
-***Player Choice: input()***
-
-- 
-- 
-
-![Screenshot of Player Choice input with error messages]()
+![Screenshot of Centipede ascii art with result of story choice](docs/readme-images/centipede-ascii.png)
 
 ### Chapter Three - Rake Story
 
-***Story Text***
+***Rake Story Text***
 
-- 
+- Narrative text to move the story forward from the centipede scenario and set the scene for the next obstacle; a massive rake.
+- The display_rake_story() function extracts the RAKE_STORY_TEXT from story_text.py and displays it on the terminal.
+- This function runs the display_rake_story_choices() function.
 
-***Options Text***
+![Screenshot of Rake Story Text](docs/readme-images/chapter-3-rake.png)
+![Screenshot of Rake narrative with options](docs/readme-images/rake-story-options.png)
 
-- 
-- 
+***Display Rake Story Choices***
 
-![Screenshot of Centipede Section with story options]()
-![Screenshot of ]()
+- Two options are displayed for the player to choose from. Each option determines a different narrative direction for the next part of the story.
+- The display_rake_story_choices() function extracts the two options (RAKE_OPTION_A and RAKE_OPTION_B) from story_text.py and displays them to the player.
+- This function then runs the get_story_choice() function to ask the player to choose option a or b.
+- An if/else statement defines which code to run and which narrative text variable to extract from story_text.py according to the choice of a or b made by the player.
+-  Both outcomes run the rake_ascii() function from rake.py which displays the rake ascii art alongside the relevant narrative text for either a or b chosen by the player.
+- For both option choices, the progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 
-***Player Choice: input()***
-
-- 
-- 
-
-![Screenshot of Player Choice input with error messages]()
+![Screenshot of Rake ascii art with result of story choice](docs/readme-images/rake-ascii.png)
 
 ***Nested Rake Options***
 
-- 
+- One of the two options in the first rake scenario contains a further set of 'nested' options for the player to choose from to progress the story.
+- The display_nested_rake_choices() function extracts the NESTED_RAKE_OPTIONS_TEXT from story_text.py and displays this on the terminal along with the two nested options a and b for the player to select between.
+- Options are displayed to the player in two different colours so they stand out from the usual story text.
+- The progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 
-![Screenshot of Nested Rake Options]()
+![Screenshot of Nested Rake Options](docs/readme-images/nested-rake-options.png)
+
+### Story Choice: input()
+
+- Each time the player is presented with a choice of two options a or b in the narrative text, the get_story_choice() function prompts the player to make a selection from the two options and enter a or b.
+- The entered choice is passed through validation function validate_story_choice() to check that they have entered either 'a' or 'b'. If it doesn't pass validation then an error message is displayed to the player with a prompt to try again.
+- The error message is displayed in red text to highlight that there is problem that needs attention.
+
+![Screenshot of Story Choice input with error messages](docs/readme-images/story-choice-error.png)
+![Screenshot of Story Choice input with error messages](docs/readme-images/centipede-choices-errors.png)
 
 ### Game Over
 
 ***Game Over Text***
 
-- 
+- At several stages of the game, the player may choose an option that results in the game over for the player.
+- The game_over() function 
 
-![Screenshot of Game Over Screen]()
+![Screenshot of Game Over Screen](docs/readme-images/game-over-rake.png)
 
 ***Restart Game: input()***
 
@@ -370,6 +376,7 @@ No code was taken from Jack's project, but it was useful for considering a suita
 - 
 
 ## Code & Technology
+
  The following code, platforms and apps were used in the creation of this program:
  - Python - The program is written in Python code and is run within a Python Terminal.
  - [Stack Overflow](https://stackoverflow.com/) - used as a reference for possible syntax of Python code.
@@ -384,3 +391,11 @@ No code was taken from Jack's project, but it was useful for considering a suita
  - [Colorama (PyPI)](https://pypi.org/project/colorama/) - used to change colour of output within the Python terminal
  - Import of [os](https://docs.python.org/3/library/os.html) built-in operating system library - used for clear screen function to help with styling and readability
  - Import of [importlib](https://docs.python.org/3/library/importlib.html) built-in import implementation library - used to reimport function to enable player to re-start from the beginning of the game.
+
+
+ ## CHEAT SHEET
+
+ The order of correct choices to reach the end of the game without dying is as follows:
+
+ - b, b, b, a
+
