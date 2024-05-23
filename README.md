@@ -17,6 +17,8 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ### Game Title (title.py)
 
+![Screenshot of title on desktop](docs/readme-images/title.png)
+
 ***Title Text***
 
 - 'Garden Escape' displayed in large text to provide clear heading to mark the beginning of the story and to give an impression of a big adventure ahead. 
@@ -32,15 +34,16 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ***Enter Name: input()***
 
+![Screenshot of title with name entered and error messages](docs/readme-images/player-name-errors.png)
+
 - The player is invited to enter a name for their story character via the get_player_name() function.
 - The name must be at least 1 character long, but less than 16 characters so it fits in the final congratulations window at the end of the story.
 - The entered name is passed through validation function validate_player_name() and if it does not pass validation then an error message is displayed to the player with a prompt to try again.
 - The error message is displayed in red text to highlight that there is problem that needs attention.
 
-![Screenshot of title on desktop](docs/readme-images/title.png)
-![Screenshot of title with name entered and error messages](docs/readme-images/player-name-errors.png)
-
 ### Introduction
+
+![Screenshot of Introduction with Good Luck message and Start Game input](docs/readme-images/intro.png)
 
 ***Good Luck Message***
 
@@ -58,37 +61,46 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 - This reinforces the connection with the player and builds tension.
 - There is no validation for this input as it is not used in any other part of the program
 
-![Screenshot of Introduction with Good Luck message and Start Game input](docs/readme-images/intro.png)
+### Chapter 1 - Spider Story
 
-### Spider Section
+![Screenshot of Spider introduction with story options](docs/readme-images/spider-story.png)
 
-***Story Text***
+***Spider Story Text***
 
-- 
+- Narrative text to start the adventure and set the scene for an encounter with a giant spider.
+- The display_spider_story() function extracts the SPIDER_STORY_TEXT from story_text.py and displays it on the terminal.
 
 ***Options Text***
 
-- 
-- 
+- Two options are displayed for the player to choose from. Each option will determine a different narrative direction for the next part of the story.
+- The display_spider_story() function extracts the two options (SPIDER_OPTION_A and SPIDER_OPTION_B) from story_text.py
+- Displayed to the player in two different colours so they stand out from the usual story text.
 
-![Screenshot of Spider Section with story options]()
-![Screenshot of ]()
+***Story Choice: input()***
 
-***Player Choice: input()***
+- Below the two options the get_story_choice() function prompts the user to make a selection from the two options (a or b) and enter their choice of a or b.
+- The entered choice is passed through validation function validate_story_choice() to check that they have entered either 'a' or 'b'. If it doesn't pass validation then an error message is displayed to the player with a prompt to try again.
+- The error message is displayed in red text to highlight that there is problem that needs attention.
 
-- 
-- 
+![Screenshot of Story Choice input prompt with error messages](docs/readme-images/story-choice-error.png)
 
-![Screenshot of Player Choice input with error messages]()
+***Display Spider Story Choices***
+
+- The display_spider_story_choices() function uses an if/else statement to define which code to run and story text to extract from story_text.py according to the choice of a or b made by the player.
+-  Both outcomes will run the spider_ascii() function from spider.py to display the spider ascii art alongside the relevant story text for either a or b chosen by the player.
+
+![Screenshot of spider ascii art with result of story choice](docs/readme-images/spider-ascii.png)
 
 ***Nested Spider Options***
 
-- 
+- One of the two options in the first spider scenario contains a further set of 'nested' options for the player to choose from to progress the story.
+- The display_nested_spider_choices() function extracts the NESTED_SPIDER_OPTIONS_TEXT from story_text.py and displays this on the terminal along with the two nested options a and b for the player to select between.
+- Options are displayed to the player in two different colours so they stand out from the usual story text.
+- Following the same process outlined above, the get_story_choice() function prompts the player to select either a or b and their choice input is validated via validate_story_choice().
 
+![Screenshot of Nested Spider Options](docs/readme-images/nested-spider-options.png)
 
-![Screenshot of Nested Spider Options]()
-
-### Centipede Section
+### Chapter Two - Centipede Story
 
 ***Story Text***
 
@@ -109,7 +121,7 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ![Screenshot of Player Choice input with error messages]()
 
-### Rake Section
+### Chapter Three - Rake Story
 
 ***Story Text***
 
