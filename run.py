@@ -5,7 +5,6 @@ import os
 import webbrowser
 import story_text as st
 import story_separator as ss
-import game_over_separator as gos
 import progress_prompt as pp
 import spider as sp
 import centipede as cen
@@ -251,7 +250,7 @@ def display_centipede_story_choices():
         print(Fore.WHITE + st.CENTIPEDE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
         os.system("clear")  # clears screen
-        gos.game_over_separator()
+        ss.game_over_separator()
         print(Fore.WHITE + st.CENTIPEDE_GAME_OVER_TEXT)
         game_over()
     else:
@@ -301,7 +300,7 @@ def display_rake_story_choices():
         print(Fore.WHITE + st.RAKE_OPTION_A_TEXT)
         pp.progress_prompt()  # adds prompt input to press enter to continue
         os.system("clear")  # clears screen
-        gos.game_over_separator()
+        ss.game_over_separator()
         print(Fore.WHITE + st.RAKE_GAME_OVER_TEXT)
         game_over()
     else:
@@ -339,7 +338,7 @@ def display_nested_rake_choices():
         os.system("clear")  # clears screen
         print(Fore.WHITE + st.END_TEXT)
     else:
-        gos.game_over_separator()
+        ss.game_over_separator()
         print(Fore.WHITE + st.RAKE_OPTION_B2_TEXT)
         game_over()
 

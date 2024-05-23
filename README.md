@@ -198,16 +198,18 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ### Existing Features
 
-- CRUD Functionality (Create, Read, Update, Delete)
-- Error Handling
-- Heroku Deployment
-- All content written and presented to fit on window of 80 characters wide x 24 lines high.
-- 
+- Not all aspects of CRUD functionality (Create, Read, Update, Delete) apply to this program as there is no requirement to read data from a database and update it, however the principle of reading different variables of text data from the story_text.py file to be imported into the game structure is evident throughout the program.
+- Robust Error Handling functions validate all player inputs where the input value is to be used in another part of the program and raise clear error messages to be displayed to the player if validation fails.
+- This program is deployed and run on Heroku using a specially designed CI Python template. 
+- All content written and presented to fit terminal window of 80 characters wide x 24 lines high.
 
 ### Future Features
+
 To expand on this project, there are a number of features that could be added to enhance player enjoyment and functionality:
-- 
-- The option to 
+- Create a leaderboard for players to record the number of tries that it took them to complete the game
+- An option for the player to add their own ending to the game which could replace the original version and be shared with other players.
+- A progress bar could be added to let the player know how far through the game they got before they died.
+- A feedback page could be linked from the terminal to ask players for their reviews of the game and any suggestions for improvement. 
  
 ## Design
 
@@ -215,25 +217,38 @@ To expand on this project, there are a number of features that could be added to
 
 ***Story Writing***
 
-- ChatGPT
+- ChatGPT was used initally to generate a range of different choose your own adventure stories about a software developer who had been shrunk and had to fight through a garden to survive getting past a spider, a centipede and a rake.
+- Elements of some of these stories were then amalagamated together and fleshed out to become the story narrative which was then converted into the story_text.py as a list of specific narrative variables to be inserted at the appropriate point.
+
+![Screenshot of Story Text document](docs/readme-images/PP3-story-text.png)
 
 ***Logic Mapping***
 
-- A flow diagram following the story narrative .
+- A flow diagram to map out the logic for the entire game was created using [LucidChart](https://www.lucidchart.com/pages/).
+- This provided a framework of the functionality required at each step of the program including:
+    - User input points
+    - Data validation requirements
+    - if/else statement functions
+    - Story narrative data requirements
 
-![Screenshot of Flow Diagram]()
+![Screenshot of Flow Diagram](docs/readme-images/garden-escape-logic-diagram.png)
 
 
 ### Building in Python
 
 ***Process***
 
-- Incremental Coding
-- 
+- The main body of the program was built using incremental coding to tackle each step outlined in the logic diagram. 
+- Where there was repetition of the same process this was moved into a global function such as the get_story_choice() function and the validate_story_choice() function.
+- To prevent the main() function from getting too long, local level functions are called from within the associated function that requires that function to run.   
 
 ***Data Model***
 
-- 
+- Rather than listing all of the story text within the run.py file, it was neater and more practical to move all of the narrative content into a separate story_text.py file and import the relevant variables when required.
+- Each block of narrative text is defined as a variable with a relevant capitalised name to indicate that it is constant and should not be changed.
+- Functions that would be repeated throughout the program were moved into separate .py files and imported as necessary such as:
+    - story_separator() to display a strip of ascii art as a form of 'page break' 
+    - progress_prompt() to ask the player to press Enter to continue
 
 ***List of Functions***
 
