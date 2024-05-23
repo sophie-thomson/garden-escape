@@ -79,8 +79,9 @@ def start_adventure(player_name):
     Returns:
         None
     """
-    print(Fore.CYAN + " You'll need your wits about you to make it out alive!")
-    print(Fore.WHITE + st.INTRO_TEXT)
+    print(Fore.CYAN + Style.BRIGHT +
+          " You'll need your wits about you to make it out alive!")
+    print(Fore.WHITE + Style.NORMAL + st.INTRO_TEXT)
     # no input validation required. Only hitting enter will continue program
     input(Fore.YELLOW +
           f" Are you ready {player_name}? Press enter to continue... \n")

@@ -26,14 +26,16 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 - Red text colour created using [Colorama 0.4.6](https://pypi.org/project/colorama/) library imported from PyPI.
 
 ***ASCII Art***
+
 - A garden themed strip of ASCII art to help set the scene alongside the title text.
 - Different coloured output created using Colorama’s constant shorthand for ANSI escape sequences.
 
 ***Enter Name: input()***
-- The player is invited to enter a name for their story character.
+
+- The player is invited to enter a name for their story character via the get_player_name() function.
 - The name must be at least 1 character long, but less than 16 characters so it fits in the final congratulations window at the end of the story.
 - The entered name is passed through validation function validate_player_name() and if it does not pass validation then an error message is displayed to the player with a prompt to try again.
-- The error message is in red text to highlight that there is problem that needs attention.
+- The error message is displayed in red text to highlight that there is problem that needs attention.
 
 ![Screenshot of title on desktop](docs/readme-images/title.png)
 ![Screenshot of title with name entered and error messages](docs/readme-images/player-name-errors.png)
@@ -42,24 +44,21 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 
 ***Good Luck Message***
 
-- 
+- An f-string at the top of the intro page displays the message "Good Luck {player}!" which inserts the name entered by the user in place of the {player} placeholder. 
+- Feeds back to the user that the name they entered has been logged and provides a more personal interaction with the game.
 
 ***Intro Text***
 
-- story_text.py
-- 
+- Introductory text to set the scene for the story, providing context and explaining the aim of the game.
+- The start_adventure() function displays the relevant block of narrative text from the story_text.py by drilling down using dot notation to the relevant variable INTRO_TEXT and extracting this content from the file to display in the terminal.
 
 ***Start Game: input()***
 
-- progress_prompt.py
+- At the bottom of the window is a prompt with an f-string displaying "Are you ready {player_name}? Press enter to continue..." which inserts the name entered by the user in place of the {player_name} placeholder.
+- This reinforces the connection with the player and builds tension.
+- There is no validation for this input as it is not used in any other part of the program
 
-![Screenshot of Introduction with Good Luck message and Start Game prompt]()
-
-***Functions Used (run.py)***
-
-- 
-- 
-- 
+![Screenshot of Introduction with Good Luck message and Start Game input](docs/readme-images/intro.png)
 
 ### Spider Section
 
@@ -140,6 +139,7 @@ The live site can be found here: https://garden-escape-185db543c454.herokuapp.co
 ### Game Over
 
 ***Game Over Text***
+
 - 
 
 ![Screenshot of Game Over Screen]()
@@ -322,6 +322,7 @@ The finished program was initially hosted within a repository on Github, and the
 ***How to Deploy to Heroku***
 
 The steps to deploy to Heroku are as follows:
+
 - 
 - 
 - 
