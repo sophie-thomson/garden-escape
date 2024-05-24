@@ -362,7 +362,7 @@ When testing the validation and Error Handling within the program the following 
 
 ### Method
 
-- Walk through every possible story line separately following the logic path laid out in the logic flow diagram
+- Walk through each possible story line testing every option separately following the logic path laid out in the logic flow diagram
 - At each step, check the aspects listed above for end-to-end logic, python functionality and validation and error handling.
 - Mark in the results table to confirm that all aspects in each section are:
     - Running as expected
@@ -402,7 +402,7 @@ When testing the validation and Error Handling within the program the following 
     |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
     |                        |            |           |                    |                    |
     |Game Over               |n           |As Expected|Correct with prompt |y or n val working  |
-    |End Credits             |-           |As Expected|Link not live       |n/a                 |
+    |End Credits             |-           |As Expected|Correct             |n/a                 |
 
 - Storyline 2:
 
@@ -430,7 +430,7 @@ When testing the validation and Error Handling within the program the following 
     |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
     |                        |            |           |                    |                    |
     |Game Over               |n           |As Expected|Correct with prompt |y or n val working  |
-    |End Credits             |-           |As Expected|Link not live       |n/a                 |
+    |End Credits             |-           |As Expected|Correct             |n/a                 |
 
 - Storyline 3:
 
@@ -449,7 +449,34 @@ When testing the validation and Error Handling within the program the following 
     |Hurtle Through Air      |-           |As Expected|Correct with prompt |Enter to cont.      |
     |Nested Rake Options     |a           |As Expected|Correct with prompt |a or b val working  |
     |Glide Using Laptop      |-           |As Expected|Correct with prompt |Enter to cont.      |
-    |Congratulations!        |
+    |Congratulations!        |-           |As Expected|Correct             |n/a                 |
+
+- Storyline 4:
+
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |Game Title              |-           |As Expected|Correct             |n/a                 |
+    |Enter Name              |-           |As Expected|Correct with prompt |name val working    |
+    |Story Intro Text        |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 1: Spider       |b           |As Expected|Correct with prompt |a or b val working  |
+    |Create Distraction      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 2: Centipede    |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Centipede Options       |b           |As Expected|Correct with prompt |a or b val working  |
+    |Search for Weapon       |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 3: Rake         |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Rake Options            |b           |As Expected|Correct with prompt |a or b val working  |
+    |Hurtle Through Air      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Nested Rake Options     |b           |As Expected|Correct with prompt |a or b val working  |
+    |Game Over               |y           |As Expected|Correct with prompt |y or n val working  |
+    |Restart - Game Title    |-           |As Expected|Correct             |n/a                 |
+
+- Storyline 4b - as above with 'n' selected as restart choice:
+
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |                        |            |           |                    |                    |
+    |Game Over               |n           |As Expected|Correct with prompt |y or n val working  |
+    |End Credits             |-           |As Expected|Correct             |n/a                 |
 
 
 ***Screenshots of ValueError messages***
