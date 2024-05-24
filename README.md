@@ -182,7 +182,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 - The player input is validated through the validate_restart_choice() function to check that the player has entered 'y' or 'n'. If the value entered doesn't pass validation then an error message is displayed to the player with a prompt to try again.
 - The error message is displayed in red text to highlight that there is a problem that needs attention.
 
-![Screenshot of Player Choice input with error messages](docs/readme-images/restart-choice-errors.png)
+![Screenshot of Player restart input with error messages](docs/readme-images/restart-choice-errors.png)
 
 ***End Credits***
 
@@ -323,53 +323,79 @@ The functions created for this program are listed below. A detailed description 
 
 ## Testing
 
-### Logic Flow
+### Testing Areas
 
-***Testing***
+***End-to-End Logic***
+
+When testing the logical flow of the program the following aspects have been tested:
 
 - That the program follows the logic sequences laid out in the logic flow diagram from start to finish.
 - That there are no logic 'loops' for the player to get stuck without progressing through the story.
-- That each story line starts and finishes at the expected outcome.
-
-***Method***
-
-- Walk through each story line following the logic path laid out in the logic flow diagram and checking that each step is the progress expected at that point.
+- That each story line starts and finishes at the expected outcome by following the correct steps.
 
 
-### Python Functionality
+***Python Functionality***
 
-***Testing***
+When testing the Python functionality of the program the following aspects have been tested:
 
-- That the correct story narrative and story options are displaying in the right places
-- That the correct ascii art is displayed in the right places
-- That all user input functions are running at the appropriate points with expected interaction prompts displayed to the player
-- That all text is readable and the coloured output is as expected
-- That clear instruction is given to the player 
+- That the correct story narrative and story options are displaying in the right places.
+- That the correct ASCII art is displayed in the right places.
+- That all user input functions are running at the appropriate points with expected interaction prompts displayed to the player.
+- That all interaction input from the player is processed correctly and triggers the expected outcome.
+- That the game play functions run smoothly with no errors from start to finish.
+- That all text is displaying correctly with no errors.
+- That all text is readable and the coloured output is as expected.
+- That clear instruction is given to the player at each stage of the game.
+- That the end credits whether you complete the game or have game over trigger the correct link in an external tab.
 
-### Validation and Error Handling
 
-***Testing***
+***Validation and Error Handling***
 
-***Method***
+When testing the validation and Error Handling within the program the following aspects have been tested:
 
+- That all player input is checked against the correct parameters via the appropriate validation function.
+- That ValueError messages are triggered if the player enters any value that is not the requested input.
+- That all ValueError messages are clear and concise providing clear instructions to the player.
+- That all ValueError messages are displayed in red text to highlight importance.
+- That all while loops used within the relevant input functions are working as expected, prompting the player to re-enter their input until it has passed validation.
+
+
+### Method
+
+- Walk through every possible story line separately following the logic path laid out in the logic flow diagram
+- At each step, check the aspects listed above for end-to-end logic, python functionality and validation and error handling.
+- Mark in the results table to confirm that all aspects in each section are:
+    - Running as expected
+    - Show no errors
+    - Run smoothly
 
 
 ### RESULTS
 
-- The results of the above tests are listed in the table below.
-    - **Logic** - Testing the logic flow for each storyline matches diagram?
-    - **Functionality** - Program functionality and display as expected?
-    - **Errors** - Error Handling mechanisms working?
+- The results are listed in the tables below under the following headings:
+    - **Logic** - Testing all aspects of end-to-end logic listed above
+    - **Functionality** - Testing all aspects of code functionality as listed above
+    - **Validation** - Testing all Error Handling mechanisms are working and appropriate
+- The results for each different possible storyline are recorded in a separate table. 
+- The **Choice** column shows the option choice that the story has followed at that stage of the storyline.
 
 - Storyline 1:
 
-    | **Storyline Logic Sequence** | **Choice** | **Logic** | **Functionality** | **Errors** |
-    |:---                          |    :---:   |   :---:   |       :---:       |    :---:   |
-    | Game Title                   |     -      | Yes       |
-    | Enter Name                   |     -      | Yes       |
-    | Story Intro Text             |     -      | Yes       |
-    | Spider Story Text            |     -
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation** |
+    |:---                    |    :---:   |   :---:   |       :---:        |      :---:     |
+    | Game Title             |-           |Expecte    |Correct             |n/a
+    | Enter Name             |-           |Expected   |Correct with prompt |Working
+    | Story Intro Text       |-           |Expected   |Correct
+    | Spider Story Text      |-           |Expected   |
 
+
+
+
+***Screenshots of ValueError messages***
+
+![Screenshot of title with name entered and error messages](docs/readme-images/player-name-errors.png)
+![Screenshot of Story Choice input with error messages](docs/readme-images/centipede-choices-errors.png)
+![Screenshot of Player restart input with error messages](docs/readme-images/restart-choice-errors.png)
 
 ### Validator Testing
 
