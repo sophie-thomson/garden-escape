@@ -325,41 +325,52 @@ The functions created for this program are listed below. A detailed description 
 
 ### Logic Flow
 
-***Method of Testing***
+***Testing***
 
-- 
+- That the program follows the logic sequences laid out in the logic flow diagram from start to finish.
+- That there are no logic 'loops' for the player to get stuck without progressing through the story.
+- That each story line starts and finishes at the expected outcome.
 
-***Results***
+***Method***
 
-- 
-- 
+- Walk through each story line following the logic path laid out in the logic flow diagram and checking that each step is the progress expected at that point.
 
+
+### Python Functionality
+
+***Testing***
+
+- That the correct story narrative and story options are displaying in the right places
+- That the correct ascii art is displayed in the right places
+- That all user input functions are running at the appropriate points with expected interaction prompts displayed to the player
+- That all text is readable and the coloured output is as expected
+- That clear instruction is given to the player 
 
 ### Validation and Error Handling
 
-- 
-- 
+***Testing***
 
-### ASCII Art Loading
+***Method***
 
-***Method of Testing***
 
-- 
 
-***Results***
+### RESULTS
 
-- 
+- The results of the above tests are listed in the table below.
+    - **Logic** - Testing the logic flow for each storyline matches diagram?
+    - **Functionality** - Program functionality and display as expected?
+    - **Errors** - Error Handling mechanisms working?
 
-### Script Functionality
+- Storyline 1:
 
-***Method of Testing***
+    | **Storyline Logic Sequence** | **Choice** | **Logic** | **Functionality** | **Errors** |
+    |:---                          |    :---:   |   :---:   |       :---:       |    :---:   |
+    | Game Title                   |     -      | Yes       |
+    | Enter Name                   |     -      | Yes       |
+    | Story Intro Text             |     -      | Yes       |
+    | Spider Story Text            |     -
 
-- 
 
-***Results***
-
-- 
-        
 ### Validator Testing
 
 - This program is written in Python only

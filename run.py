@@ -365,8 +365,10 @@ def game_over():
 P l a y i n g !\n\n\n")
         print("  This choose-your-own adventure story was designed by Sophie \
 Thomson:\n")
-        print(Fore.CYAN + webbrowser.open
-              ("https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n"))
+        print(Fore.CYAN +
+              "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+        webbrowser.open(
+              "https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
         exit()  # exits the program
 
 
@@ -430,8 +432,12 @@ def main():
         f"   Congratulations\n    {player_name}!", font="small"))
     print(Fore.CYAN +
           "             Y o u   E s c a p e d   T h e   G a r d e n !\n")
+    print("  This choose-your-own adventure story was designed by Sophie \
+Thomson:\n")
     print(Fore.WHITE +
-          "               T h a n k   Y o u   F o r   P l a y i n g\n")
+          "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+    webbrowser.open(
+          "https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
     exit()  # exits the program
 
 
