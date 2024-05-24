@@ -381,14 +381,75 @@ When testing the validation and Error Handling within the program the following 
 
 - Storyline 1:
 
-    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation** |
-    |:---                    |    :---:   |   :---:   |       :---:        |      :---:     |
-    | Game Title             |-           |Expecte    |Correct             |n/a
-    | Enter Name             |-           |Expected   |Correct with prompt |Working
-    | Story Intro Text       |-           |Expected   |Correct
-    | Spider Story Text      |-           |Expected   |
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |Game Title              |-           |As Expected|Correct             |n/a                 |
+    |Enter Name              |-           |As Expected|Correct with prompt |name val working    |
+    |Story Intro Text        |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 1: Spider       |a           |As Expected|Correct with prompt |a or b val working  |
+    |Sneak Past              |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Nested Spider Options   |a           |As Expected|Correct with prompt |a or b val working  |
+    |Roll out of way         |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 2: Centipede    |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Centipede Options       |a           |As Expected|Correct with prompt |a or b val working  |
+    |Attempt to outmanoeuver |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Game Over               |y           |As Expected|Correct with prompt |y or n val working  |
+    |Restart - Game Title    |-           |As Expected|Correct             |n/a                 |
 
+- Storyline 1b - as above with 'n' selected as restart choice:
 
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |                        |            |           |                    |                    |
+    |Game Over               |n           |As Expected|Correct with prompt |y or n val working  |
+    |End Credits             |-           |As Expected|Link not live       |n/a                 |
+
+- Storyline 2:
+
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |Game Title              |-           |As Expected|Correct             |n/a                 |
+    |Enter Name              |-           |As Expected|Correct with prompt |name val working    |
+    |Story Intro Text        |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 1: Spider       |a           |As Expected|Correct with prompt |a or b val working  |
+    |Sneak Past              |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Nested Spider Options   |b           |As Expected|Correct with prompt |a or b val working  |
+    |Reason with Spider      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 2: Centipede    |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Centipede Options       |b           |As Expected|Correct with prompt |a or b val working  |
+    |Search for Weapon       |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 3: Rake         |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Rake Options            |a           |As Expected|Correct with prompt |a or b val working  |
+    |Run Away                |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Game Over               |y           |As Expected|Correct with prompt |y or n val working  |
+    |Restart - Game Title    |-           |As Expected|Correct             |n/a                 |
+
+- Storyline 2b - as above with 'n' selected as restart choice:
+
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |                        |            |           |                    |                    |
+    |Game Over               |n           |As Expected|Correct with prompt |y or n val working  |
+    |End Credits             |-           |As Expected|Link not live       |n/a                 |
+
+- Storyline 3:
+
+    | **Storyline Sequence** | **Choice** | **Logic** | **Functionality**  | **Validation**     |
+    |:---                    |    :---:   |   :---:   |       :---:        |       :---:        |
+    |Game Title              |-           |As Expected|Correct             |n/a                 |
+    |Enter Name              |-           |As Expected|Correct with prompt |name val working    |
+    |Story Intro Text        |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 1: Spider       |b           |As Expected|Correct with prompt |a or b val working  |
+    |Create Distraction      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 2: Centipede    |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Centipede Options       |b           |As Expected|Correct with prompt |a or b val working  |
+    |Search for Weapon       |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Chapter 3: Rake         |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Rake Options            |b           |As Expected|Correct with prompt |a or b val working  |
+    |Hurtle Through Air      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Nested Rake Options     |a           |As Expected|Correct with prompt |a or b val working  |
+    |Glide Using Laptop      |-           |As Expected|Correct with prompt |Enter to cont.      |
+    |Congratulations!        |
 
 
 ***Screenshots of ValueError messages***
@@ -511,4 +572,3 @@ No code was taken from Jack's project, but it was useful for considering a suita
  The order of correct choices to reach the end of the game without dying is as follows:
 
  - b, b, b, a
-

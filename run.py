@@ -432,10 +432,10 @@ def main():
         f"   Congratulations\n    {player_name}!", font="small"))
     print(Fore.CYAN +
           "             Y o u   E s c a p e d   T h e   G a r d e n !\n")
-    print("  This choose-your-own adventure story was designed by Sophie \
-Thomson:\n")
-    print(Fore.WHITE +
-          "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
+    print(Fore.WHITE + "  This choose-your-own adventure story was designed \
+by Sophie Thomson:\n")
+    print(Fore.CYAN +
+          "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
     webbrowser.open(
           "https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
     exit()  # exits the program
