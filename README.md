@@ -81,7 +81,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ***Display Spider Story Choices***
 
-- The display_spider_story_choices() function gets the story choice from the player and uses an if/else statement to define which code to run and story text to extract from story_text.py according to the choice of a or b made by the player.
+- The display_spider_story_choices() function gets the story choice from the player and uses an if/else statement to define which code to run and narrative text to extract from story_text.py according to the choice of a or b made by the player.
 -  Both outcomes will run the spider_ascii() function from spider.py which displays the spider ascii art alongside the relevant narrative text for either a or b chosen by the player.
 - For both option choices, the progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
 - This function allows the player to move through each 'page' of the story at their own pace and does not require any validation as the input is not used anywhere else.
@@ -97,6 +97,9 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 ![Screenshot of Nested Spider Options](docs/readme-images/nested-spider-options.png)
 
+***Story Progress***
+
+- If the player makes it through all of the spider related choices without dying, then the program moves on to the next line of code in the main() function and the next chapter is displayed. 
 
 ### CHAPTER TWO - Centipede Story
 
@@ -147,15 +150,14 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 - One of the two options in the first rake scenario contains a further set of 'nested' options for the player to choose from to progress the story.
 - The display_nested_rake_choices() function extracts the NESTED_RAKE_OPTIONS_TEXT from story_text.py and displays this on the terminal along with the two nested options a and b for the player to select between.
-- Options are displayed to the player in two different colours so they stand out from the usual story text.
-- The progress_prompt() function is imported from progress_prompt.py to ask the player to "Press enter to continue..." when they are ready.
+- Options are displayed to the player in two different colours so they stand out from the usual story text and the player is promtped to enter their choice.
 
 ![Screenshot of Nested Rake Options](docs/readme-images/nested-rake-options.png)
 
 
 ### Story Choice: input()
 
-- Each time the player is presented with a choice of two options a or b in the narrative text, the get_story_choice() function prompts the player to make a selection from the two options and enter a or b.
+- Each time the player is presented with a choice of two options (a or b) in the narrative text, the get_story_choice() function prompts the player to make a selection from the two options and enter a letter 'a' or 'b'.
 - The entered choice is passed through validation function validate_story_choice() to check that they have entered either 'a' or 'b'. If it doesn't pass validation then an error message is displayed to the player with a prompt to try again.
 - The error message is displayed in red text to highlight that there is problem that needs attention.
 
@@ -178,7 +180,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 - The get_restart_choice() function displays the message "Would you like to start again?" and asks the player to enter y or n to indcate their answer.
 - The player input is validated through the validate_restart_choice() function to check that the player has entered 'y' or 'n'. If the value entered doesn't pass validation then an error message is displayed to the player with a prompt to try again.
-- The error message is displayed in red text to highlith that there is a problem that needs attention.
+- The error message is displayed in red text to highlight that there is a problem that needs attention.
 
 ![Screenshot of Player Choice input with error messages](docs/readme-images/restart-choice-errors.png)
 
@@ -196,6 +198,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 
 - The last code to run in the main() function will only run if the player makes it all the way to the end of the game.
 - This displays the narrative variable END_TEXT to finish the story and an f-string stating "Congratulations {player_name}!" which inserts the name chosen by the player in place of the {player_name} placeholder.
+- This gives the user a positive and personal feedback message that they have beaten the game.
 - The congratulations message is generated using [pyfiglet](https://pypi.org/project/pyfiglet/) in 'small' font and yellow colour to stand out and highlight that it is different to the other title and game over text styles.
 
 ![Screenshot of Congratulations Screen](docs/readme-images/congratulations.png)
@@ -206,7 +209,7 @@ If you get stuck or wish to run through the story to reach the end to test the f
 - Robust Error Handling functions validate all player inputs where the input value is to be used in another part of the program and raise clear error messages to be displayed to the player if validation fails.
 - This program is deployed and run on Heroku using a specially designed CI Python template. 
 - All content written and presented to fit terminal window of 80 characters wide x 24 lines high.
-- Elements of CRUD functionality (Create, Read, Update, Delete) are evident in the reading of different variables of text data from the story_text.py file which are imported into the code throughout the code.
+- Elements of CRUD functionality (Create, Read, Update, Delete) are evident in the reading of different variables of text data from the story_text.py file, and ASCII Art code files which are read and diplayed on the terminal throughout the program.
 
 
 ### Future Features
@@ -227,7 +230,8 @@ To expand on this project, there are a number of features that could be added to
 - ChatGPT was used initally to generate a range of different choose your own adventure stories about a software developer who had been shrunk and had to fight through a garden to survive getting past a spider, a centipede and a rake.
 - Elements of some of these stories were then amalagamated together and fleshed out to become the story narrative which was then converted into the story_text.py as a list of specific narrative variables to be inserted at the appropriate point.
 
-![Screenshot of Story Text document](docs/readme-images/PP3-story-text.png)
+![Screenshot of Story Text Google doc](docs/readme-images/PP3-story-text.png)
+![Screenshot of story Text as .py file](docs/readme-images/story-text-example.png)
 
 ***Logic Mapping***
 
@@ -251,9 +255,9 @@ To expand on this project, there are a number of features that could be added to
 
 ***Data Model***
 
-- Rather than listing all of the story text within the run.py file, it was neater and more practical to move all of the narrative content into a separate story_text.py file and import the relevant variables when required.
+- To prevent the run.py file getting too large and difficult to read, all of the narrative data is in a separate story_text.py file and the relevant variables are read and displayed as required.
 - Each block of narrative text is defined as a variable with a relevant capitalised name to indicate that it is constant and should not be changed.
-- Functions that would be repeated throughout the program were moved into separate .py files and imported as necessary such as:
+- Functions that are repeated throughout the program are in separate .py files and imported as necessary such as:
     - story_separator() to display a strip of ascii art as a form of 'page break' 
     - progress_prompt() to ask the player to press Enter to continue
 
@@ -307,7 +311,7 @@ The functions created for this program are listed below. A detailed description 
 
 ### Layout and Styling
 
-- All content written and presented to fit on window of 80 characters wide x 24 lines high.
+- All content is written and presented to fit on window of 80 characters wide x 24 lines high.
 - Consistent use of colours for repeating elements to improve user experience and readability:
     - White: Narrative text
     - Yellow: Call to attention for player to interact with game
@@ -358,7 +362,7 @@ The functions created for this program are listed below. A detailed description 
         
 ### Validator Testing
 
-- Python
+- This program is written in Python only
     -  No errors were found when passing through the Pep8 Validator [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ![Screenshot of Python validation results for run.py](docs/readme-images/linter-run.png)
@@ -371,11 +375,11 @@ The functions created for this program are listed below. A detailed description 
 ![Screenshot of Python validation results for title.py](docs/readme-images/linter-title.png)
 
 - GitPod Problems
-    - No problems detected within the Gitpod Garden-Escape workspace
+    - No problems were detected within the Gitpod Garden-Escape workspace
 
 ### Unfixed Bugs
 
-- On occassion there is some residual code from the title text or ascii art that is not cleared by the os.system("clear") function. This issue is inconsistent and does not affect the user experience as it is not visible unless the player chooses to scroll up on the terminal window. I have not been able to identify a reason for this issue, but as it does not impact the intended functionality and use of the program I have kept the title text and ascii art in the program.
+- On occassion there is some residual code from the title text or ascii art that is not cleared by the os.system("clear") function. This issue is inconsistent and does not affect the user experience as it is not visible unless the player chooses to scroll up on the terminal window. I have not been able to identify the reason for this issue, but as it does not impact the intended functionality and use of the program I have kept the title text and ascii art in the program.
 - No other bugs.
 
 ## Deployment
@@ -391,7 +395,7 @@ The following commands were used througout development to push the code through 
 
 ### Deployment
 
-The finished program was initially hosted within a repository on Github, and then this Github repository was connected with Heroku, the site through which the final project was deployed.
+The finished program was initially hosted within a repository on Github, and then this Github repository was connected with Heroku, the site through which the program is deployed.
 
 ***How to Deploy to Heroku***
 
@@ -400,7 +404,7 @@ The steps to deploy to Heroku are as follows:
 - Ensure that you have a file in your program file directory called: requirements.txt 
 - Ensure that all imported libraries that are used in your program are listed in the requirements.txt file.
     - To add any new libraries, type the following command into the terminal: pip3 freeze > requirements.txt
-- Ensure that there is a \n (new line) at the end of every input function in your code.
+- To avoid errors, ensure that there is a \n (new line) at the end of every input function in your code.
 - Use **git add .** then **git commit -m "Commit message."** and then **git push** to push all latest changes into the relevant repository on Github.
 - Go to the [Heroku Website](https://dashboard.heroku.com/) and log in by clicking on the link in the top right corner of the screen.
     - Sign up for a new Heroku account if needed. 
@@ -413,7 +417,7 @@ The steps to deploy to Heroku are as follows:
 - Select the **'Settings'** tab at the top of the screen and scroll to the Config Vars section
 - Click on **'Reveal Config Vars'** and if you have a file with confidetial information such as a CREDS.json file type 'CREDS' in the 'key' field and then copy the entire contents of your CREDS.json file and paste it all into the 'Value' field before clicking on **'Add'**.
 - Repeat the above process to add a second Config Var and type 'PORT' in the 'Key' field and type '8000' in the 'Value' field before clicking on **'Add'**
-- Scroll down to the Build Packs section and click on **'Add buildpack'**, then select 'Python' from the menu and click on **'Add'**.
+- Scroll down to the Buildpacks section and click on **'Add buildpack'**, then select 'Python' from the menu and click on **'Add'**.
 - Repeat the above process to add a second buildpack. This time select 'nodejs' from the menu and click on **'Add'**.
 - Check that both buildpacks are listed and that Python is positioned on top, with nodejs listed underneath.
 - Scroll back to the top of the page and click on the 'Deploy' tab.
@@ -431,7 +435,7 @@ The steps to deploy to Heroku are as follows:
 
 ***Data Model***
 
-- [Portal Hunt](https://github.com/JackLamb99/portal-hunt/) by Jack Lamb was referred to as an example of how to structure the story narrative data (story_text.py) ready to be imported and used in run.py. 
+- [Portal Hunt](https://github.com/JackLamb99/portal-hunt/) by Jack Lamb was referred to as an example of how to structure story narrative data to be imported and read in run.py. 
 
 No code was taken from Jack's project, but it was useful for considering a suitable data model. 
 
@@ -445,7 +449,7 @@ No code was taken from Jack's project, but it was useful for considering a suita
 - Guidance on [Geeks for Geeks](https://www.geeksforgeeks.org/clear-screen-python/) was used as reference for how to clear the screen in python using os.system("clear")
 - The code in a [StackOverflow discussion](https://stackoverflow.com/questions/1254370/reimport-a-module-while-interactive) was adapted to enable the title content to be re-imported if the player chooses to re-start the game.
 - A [StackOverflow discussion](https://stackoverflow.com/questions/66134751/how-do-i-properly-print-ascii-art) was used as a reference for formatting ASCII art to print correctly.
-- 
+
 
 ## Code & Technology
 

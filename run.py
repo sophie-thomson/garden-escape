@@ -12,7 +12,6 @@ import rake as rk
 import title as title
 
 
-
 def get_player_name():
     """
     Gets a chosen name from the player and runs validation to check length.
