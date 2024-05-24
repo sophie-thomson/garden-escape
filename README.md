@@ -295,7 +295,6 @@ The functions created for this program are listed below. A detailed description 
 - Colorama (PyPI) - used to create coloured output for better readability and visual interest
 - importlib - importlib.reload() function used to reload game title if player restarts the game 
 - os - os.system("clear") function used to clear the window
-- webbrowser - used to open link to LinkedIn profile when end credits are displayed
 
 ***ASCII Art***
 
@@ -377,7 +376,7 @@ When testing the validation and Error Handling within the program the following 
     - **Functionality** - Testing all aspects of code functionality as listed above
     - **Validation** - Testing all Error Handling mechanisms are working and appropriate
 - The results for each different possible storyline are recorded in a separate table. 
-- The **Choice** column shows the option choice that the story has followed at that stage of the storyline.
+- The **Choice** column shows the option choice that the test player selects at that stage of the storyline.
 
 - Storyline 1:
 
@@ -505,6 +504,7 @@ When testing the validation and Error Handling within the program the following 
 ### Unfixed Bugs
 
 - On occassion there is some residual code from the title text or ascii art that is not cleared by the os.system("clear") function. This issue is inconsistent and does not affect the user experience as it is not visible unless the player chooses to scroll up on the terminal window. I have not been able to identify the reason for this issue, but as it does not impact the intended functionality and use of the program I have kept the title text and ascii art in the program.
+- The built in webbrowser library was originally imported to open the LinkedIn profile for the creator of the game from the end credits. It worked to open the link from the python terminal, but would not open the link when deployed onto Heroku so this library and functionality has been removed from the program. 
 - No other bugs.
 
 ## Deployment

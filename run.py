@@ -2,7 +2,6 @@ from pyfiglet import figlet_format
 from colorama import Fore, Style
 import importlib
 import os
-import webbrowser
 import story_text as st
 import story_separator as ss
 import progress_prompt as pp
@@ -364,11 +363,9 @@ def game_over():
               "\n\n\n               T h a n k   Y o u   F o r   \
 P l a y i n g !\n\n\n")
         print("  This choose-your-own adventure story was designed by Sophie \
-Thomson:\n")
-        print(Fore.CYAN +
-              "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
-        webbrowser.open(
-              "https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
+Thomson\n")
+        print(Fore.CYAN + "  LinkedIn Profile: \
+https://www.linkedin.com/in/sophie-thomson-1192b02aa/ \n\n")
         exit()  # exits the program
 
 
@@ -433,11 +430,10 @@ def main():
     print(Fore.CYAN +
           "             Y o u   E s c a p e d   T h e   G a r d e n !\n")
     print(Fore.WHITE + "  This choose-your-own adventure story was designed \
-by Sophie Thomson:\n")
+by Sophie Thomson\n")
     print(Fore.CYAN +
-          "  https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
-    webbrowser.open(
-          "https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
+          "  LinkedIn Profile: \
+https://www.linkedin.com/in/sophie-thomson-1192b02aa/")
     exit()  # exits the program
 
 
